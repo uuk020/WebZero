@@ -1,0 +1,169 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,
+fieldset,input,textarea,p,blockquote,th,td { 
+	padding: 0; 
+	margin: 0; 
+} 
+body{
+	font-family: "Microsoft Yahei",sans-serif;
+	background-color: #dedede;
+}
+
+.nav{
+	width: 100%;
+	height: 60px;
+	background-color: #333;
+	overflow: hidden;
+}
+.logo{
+	display: block;
+	width: 120px;
+	height: 40px;
+	float: left;
+	margin:10px 0 0 39px;
+	background: url(../img/bd_logo1.png);
+}
+.nav_list{
+	float: right;
+	height: 54px;
+}
+.nav_list li{
+	float: left;
+	margin-right: 40px;
+	height: 54px; 	
+}
+.nav_list  a{
+	font:12px/50px "Microsoft Yahei",sans-serif;
+	color: #fff;
+	text-decoration: none;
+}
+.container{
+	padding: 20px;
+	background-color: #dedede;
+}
+article{
+	background-color: #fff;
+	padding:30px 20px;
+	margin-bottom: 10px;
+	box-shadow: 2px 2px 2px #999;
+}
+.sub_title{
+	color: #767475;
+	margin-top:19px;
+	margin-bottom: 16px; 
+}
+.author{
+	color: #767475;
+	width: 140px;
+	height: 15px;
+	font-size: 13px;
+	margin-bottom: 21px;
+}
+.main_text p{
+	text-indent: 2em;
+}
+#ol_style{
+	font-size: 18px;
+	list-style: none;
+}
+#ul_style{
+	padding-left: 60px;
+	padding-top: 20px;
+}
+.pic{
+	width: 121px;
+	height: 126px;
+	border: 1px solid #cbcbcb;
+	margin-bottom: 14px;
+	list-style: none;
+	padding: 5px 10px 10px 10px;
+	margin-bottom: 20px;
+}
+.pic p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.pic  img{
+	padding-left: 10px;
+}
+.main_text table thead {
+	background: #333;
+	color: #fff;
+}
+
+.table_title{
+	width: 495px;
+	height: 25px;
+} 
+.table_action{
+	width: 207px;
+	height:25px;
+}
+.main_text table tfoot {
+	background: #ccc;
+}
+.sidebar{
+	width: 97%;	
+}
+.sidebar_title{
+	border-left: 4px solid #ccc;
+	padding-left: 8px;
+}
+.form_info .text_field {
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.form_info .form_group {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.form_info .form_group .group_name{
+	text-align: right;
+	width: 150px;
+	display: inline-block;
+}
+.form_info .form_group .group_value, .form_info .text_field p{
+	width: 240px;
+	display: inline-block;
+
+}
+.form_info .text_field p {
+	text-align: left;
+	width: 244px;
+	float: right;
+	color: #ccc;
+}
+.form_info .tip {
+	text-align: right;
+}
+.text_field{
+	width: 400px;
+	margin:30px auto;
+}
+.form_group {
+	font-size:15px;
+	width:150px;
+}
+.tip{
+	font-size: 15px;
+	float: right;
+	color: #ccc;
+	width: 200px;
+}
+.submit_field{
+	width: 100%;
+	height: 40px;
+	background-color: #3355d0;
+	color: #fff;
+	border: 0;
+	font-size:17px;
+	border-radius: 10px;
+}
+.footer{
+	height: 69px;
+	background-color: #000;
+	overflow: hidden;
+	color: #fff;
+	font-size:12px;
+	text-align: center;
+	line-height: 45px;
+}
