@@ -1,0 +1,106 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,
+fieldset,input,textarea,p,blockquote,th,td { 
+	padding: 0; 
+	margin: 0; 
+}
+body{
+  padding: 20px;
+  font-family: "微软雅黑";
+  font-size: 15px;
+}
+/*简单布局*/
+.contain_box{
+	margin: 0 auto;
+  	padding: 20px;
+  	background: #eee;
+  	border: 1px solid #999;
+ 	overflow: auto;
+  	min-width: 600px;
+} 
+.left{
+	width: 160px;
+	background-color: #fff;
+	float: left;
+	border: 1px solid #999;
+	padding: 20px;
+}
+.team_logo{
+	float: left;
+	border: 1px solid #000;
+}
+.team_name{
+	width: 180px;
+	font-size: 16px;
+	text-align: center;
+}
+.right{
+	width: 120px;
+	background-color: #fff;
+	float: right;
+	border: 1px solid #999;
+}
+.team_member{
+	border: 1px solid #000;
+	margin: 20px;
+	display: block;
+}
+.container{
+	padding: 20px;
+ 	background: #fff;
+ 	border: 1px solid #999;
+ 	margin-left: 220px;
+ 	margin-right: 140px;
+}
+.container h2{
+	text-align: center;
+}
+.container h3{
+	padding: 20px 0;
+}
+.container p{
+	text-indent: 2em;
+}
+/*双飞翼布局样式*/
+.bird{
+	margin: 0 auto;
+  	padding: 20px;
+  	background: #eee;
+  	border: 1px solid #999;
+ 	overflow: auto;
+  	min-width: 600px;
+}
+.brid_body{
+	float: left;
+	width: 100%;
+}
+.brid_main{
+	padding: 20px;
+ 	background: #fff;
+ 	border: 1px solid #999;
+	margin: 0 140px 0 220px;
+}
+.brid_body h2{
+	text-align: center;
+}
+.brid_body h3{
+	padding: 20px 0;
+}
+.brid_body p{
+	text-indent: 2em;
+}
+.bird_left{
+	width: 160px;
+	background-color: #fff;
+	float: left;
+	border: 1px solid #999;
+	padding: 20px;
+	margin-left: -100%;
+}
+.brid_right{
+	float: left;
+	width: 120px;
+	background-color: #fff;
+	border: 1px solid #999;
+	margin-left: -122px;
+
+}
