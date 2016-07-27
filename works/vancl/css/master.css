@@ -1,0 +1,775 @@
+body{
+	color: #333;
+	font-size:12px;
+	font-family: "宋体";
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, textarea, p, th, td{
+	margin: 0;
+	padding:0;	
+}
+h1,h2,h3,h4,h5,h6{
+	font-size: 100%;
+	color: #333;
+	font-weight: normal;
+}
+a{
+	text-decoration: none;
+}
+input,textarea,select{
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: normal;
+}
+
+.vanclhead{
+	height: auto;
+	width: 100%;
+}
+.headerTopAreaBox{
+	height:32px;
+	width:100%;
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+	color: #808080;
+}
+.headerTop{
+	height: 31px;
+	min-width:980px;
+	max-width: 1200px;
+	margin: 0 auto; 
+	line-height: 32px;
+}
+.headerTopLeft{
+	float: left;
+	min-width: 480px;
+}
+.loginArea{
+	float: left;
+}
+.loginArea a{
+		color:#808080;
+		text-decoration: none;
+}
+.recommendArea{
+	float: left;
+	display: inline;
+	margin:0 0 0 13px;
+}
+.recommendArea a {
+	color: #808080;
+	text-decoration: none;
+	padding-right: 14px;
+}
+.recommendArea  a:hover{
+	color: #b81c22;
+}
+.headerTopRight{
+	float: right;
+	width: 515px;
+	position: relative;
+	z-index: 10000;
+}
+#myVancl,#vanclhelp,#vanclCustomer{
+	display: inline;
+	width:70px;
+	height:18px;
+	float: left;
+	cursor: pointer; 
+	line-height: 18px;
+	margin: 7px 5px 0 0 ;
+	position: relative;
+	z-index: 1000;
+}
+
+.mapDropTitle{
+	display: block;
+	background: url(../img/vanclsprite.png) no-repeat;
+	background-position: 54px 3px;
+	padding-left: 5px;
+	text-align: left;
+	width: 65px;
+}
+.mapDropTitle a:hover{
+	color: #a10000;
+}
+.mapDropListBox{
+	display: none;
+	position: absolute;
+	left: 0;
+	top:18px;
+}
+.hover{
+	display: block;
+	background: url(../img/spritesbgtop.png);
+	background-position: 0 -40px;
+}
+.mapDropList{
+	background: #fff;
+	overflow: hidden;
+	padding:4px 0 0 ;
+	width: 68px; 
+	border-left: 1px solid #a10000;
+	border-right: 1px solid #a10000;
+	border-bottom: 1px solid #a10000;
+}
+.mapDropList li{
+	width: 70px;
+	
+}
+.mapDropList li a{
+	display: block;
+	padding-left: 14px;
+	width: 54px;
+	background: url(../img/spritesbgtop.png) no-repeat;
+	background-position: -115px 7px;
+}
+.mapDropList li a:hover{
+	color: #a10000!important;
+	background-position: -115px -13px;
+}
+
+#myVancl a,#vanclhelp a,#vanclCustomer a {
+	color: #808080;
+	text-decoration: none;
+}
+.vanclPhone {
+	float: left;
+	display: inline;
+	margin-left: 15px;
+}
+.vanclPhone a{
+	color: #808080;
+	text-decoration: none;
+	display: block;
+	background: url(../img/vanclsprite.png) no-repeat;
+	background-position: 54px -26px;
+	height: 24px;
+	line-height: 20px;
+	margin-top: 6px;
+	overflow: hidden;
+	padding-right: 15px;
+	width: 50px;
+	white-space: nowrap;
+}
+
+.payattention{
+	float: right;
+	height: 29px;
+	width: 55px;
+}
+.vweixinbox{
+	float: left;
+	position: relative;
+	width: 30px;
+	height: 25px;
+}
+.vweixin{
+	cursor: pointer;
+	display: inline;
+	float: left;
+	width: 18px;
+	height: 18px;
+	margin:6px 0  0 10px;
+	background: url(../img/w1.jpg);
+}
+.vweixinTip{
+	background: url(../img/weixin.png);
+	border:1px solid #e5e5e5;
+	cursor: pointer;
+	height: 169px;
+	width: 148px;
+	display:none;
+	overflow: hidden;
+	position: absolute;
+	top: 30px;
+	right: 0;
+	z-index: 10000;
+}
+.vweibo{
+	cursor: pointer;
+	display: inline;
+	float: left;
+	width: 18px;
+	height: 18px;
+	margin:6px 0  0 0;
+	background: url(../img/w2.jpg);
+}
+.sdimg{
+	height: 12px;
+	max-width: 1200px;
+	min-width: 980px;
+	margin: 0 auto;
+}
+.vanclLogoSearch{
+	max-width: 1200px;
+	min-width: 980px;
+	height: 62px;
+	margin: 20px auto 10px;
+}
+.vanclLogo{
+	height: 47px;
+	width: 166px;
+	padding:0 0 0 33px;
+	float: left;
+}
+.vanclLogo a{
+	display: block;
+	background: url(../img/vanclsprite1.png) no-repeat;
+	background-position: 0 -59px;
+	height: 44px;
+	width: 166px;
+}
+.vanclSearch{
+	float: right;
+	width: 558px;
+	height: 52px;
+	padding-top: 8px;
+}
+.searchTab{
+	height: 29px;
+	width: 558px;
+}
+.search{
+	float: left;
+	width: 440px;
+	height: 29px;
+}
+.ac_input{
+	float: left;
+	width: 379px;
+	height: 27px;
+	border: 1px solid #c9caca;
+	line-height: 27px;
+	padding: 0 5px;
+}
+.btn{
+	background: url(../img/vanclsprite1.png) no-repeat;
+	background-position: -100px 0;
+	border: medium none;
+	cursor: pointer;
+	height: 29px;
+	width: 49px;
+}
+.shopbtn{
+	float: right;
+	width: 104px;
+	height: 27px;
+	padding: 1px 1px 1px 1px;
+	border: 1px solid #c1383e;
+	background: url(../img/vanclsprite1.png) no-repeat;
+	background-position: -154px 0;
+}
+.shopbtn a{
+	padding: 6px 0 0 29px; 
+	width: 76px;
+	height: 15px;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+}
+.btnword{
+	width: 440px;
+	height: 18px;
+	color: #727171;
+	padding-top: 5px;
+	line-height: 18px;
+	text-align: center;
+}
+.btnword  a{
+	color: #727171;
+	margin:0 5px 0 0 ;
+	text-decoration: none;
+}
+.vanclnav{
+	max-width: 1200px;
+	min-width: 998px;
+	margin: 0 auto;
+	height: 49px;
+}
+.allProduct{
+	float: left;
+	width: 260px;
+	height: 49px;
+	background: #b81c22;
+}
+.subnavCon{
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	font-family: "Microsoft Yahei";
+	font-size: 17px;
+	text-align: center;
+	line-height: 49px;
+}
+#v_Category{
+	position: relative;
+	z-index: 1000;
+}
+.ulfr{
+	float: right;
+}
+.ulfr li{
+	float: left;
+	width: 117.5px;
+	height: 49px;
+	list-style: outside none none; 
+	background: #efefef;
+}
+.ulfr li:hover{
+	background: #ddd;
+}
+.ulfr li a{
+	width: 100%;
+	height: 49px;
+	display: block;
+	font-size: 16px;
+	font-family: "Microsoft Yahei";
+	text-align: center;
+	line-height: 49px;
+	color: #727171;
+	text-decoration: none;
+}
+.ulfr li a:hover{
+	color:#b81c22;
+}
+.mainNavHover{
+	display: block;
+}
+.vanclSubNavList{
+	height: auto;
+	width: auto;
+	position: absolute;
+	top:49px;
+	left: 260px;
+}
+.disnone{
+	display: none;
+}
+.disshow{
+	display: block;
+}
+.i_pic_content{
+	float: left;
+	height: 170px;
+	padding: 10px 0 0;
+	width: 49%;
+}
+.picB{
+	float: left;
+	height: 140px;
+	margin:0 0 0 14%;
+	overflow: hidden;
+	width: 140px;
+}
+.picB a{
+	border: 0 none;
+}
+.picB a img{
+	border: 0 none;
+	height: 100%;
+	width: 100%;
+}
+.i_item_pic{
+	background:#fefefe ;
+	height: 170px;
+	width: 938px;
+	overflow: hidden;
+	border-color:#dbdbdb #dbdbdb #dc9094;
+	border-style:solid;
+	border-width: 1px 1px 2px;
+}
+.i_pic_line{
+	border-left: 1px solid #dbddbd;
+	float: left;
+	height: 140px;
+	margin:20px 0 0;
+	overflow: hidden;
+	width: 1%;
+}
+.contentB{
+	width: 230px;
+	float: left;
+	height: 140px;
+	overflow: hidden;
+	padding:10px 0 0;
+}
+.contentB h3{
+	height: 35px;
+	line-height: 30px;
+	text-align: left;
+	overflow: hidden;
+	width: 100%;
+}
+.contentB h3 a {
+	color: #727171;
+	font-size: 16px;
+	font-weight: bolder;
+	text-decoration: none;
+}
+.contentB h3 a:hover{
+	color: #a10000;
+}
+.contentB p{
+	color: #999;
+	font-size: 12px;
+	line-height: 16px;
+	text-align: left;
+	width: 150px;
+}
+.contentB span{
+	color: #b81c22;
+	font-size: 16px;
+	line-height: 30px;
+}
+.vanclContent{
+	max-width: 1200px;
+	min-width: 980px;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.wwwcategoryList{
+	float: left;
+	height: 492px;
+	width: 260px;
+	overflow: hidden;
+	position: relative;
+	z-index: 1000;
+}
+.categpost{
+	background: #fff;
+	position: absolute;
+	z-index: 1000;
+}
+.wwwcategoryList dl{
+	-moz-border-bottom-color:none;
+	-moz-border-top-color:none;
+	-moz-border-left-color:none;
+	-moz-border-right-color:none;
+	background: #fff;
+	border-color: #c8c8c9;
+	border-image: none;
+	border-style: solid solid none;
+	border-width: 1px 1px medium;
+	line-height: 16px;
+	margin-top: 17px;
+	padding-top: 10px;
+	position: relative;
+	width: 258px;
+}
+.wwwcategoryList h3{
+	background: #fff;
+	color: #b81c22;
+	position: absolute;
+	left: 35px;
+	top:-10px;
+	font-size: 14px;
+	line-height: 20px;
+	padding: 0 3px;
+}
+.wwwcategoryList h3 a{
+	color: #b81c22;
+
+}
+.wwwcategoryList dl dt{
+	color: #a3a2a2;
+	font-family: "Microsoft Yahei";
+	font-size: 14px;
+	padding:10px 0 0 37px;
+}
+.wwwcategoryList dl dt a{
+	color: #a3a2a2;
+}
+.wwwcategoryList dd{
+	border-bottom: 1px solid #c8c8c9;
+	padding:5px 0 10px 30px; 
+}
+
+.wwwcategoryList dd a{
+	color: #727171;
+	line-height: 20px;
+	display: inline-block;
+	padding: 0 5px;
+}
+.wwwcategoryList dd a:hover{
+	color: #b81c22;
+	background: #e5e6e6;
+}
+.vanclFocusAd{
+	float: right;
+	max-width: 930px;
+	min-width: 710px;
+}
+.vanclFocus{
+	float: left;
+	height: 475px;
+	overflow: hidden;
+	width: 710px;
+	z-index: 5;
+	position: relative;
+}
+.vanclAd{
+	float: right;
+	border-bottom: 1px solid #c9c9c9;
+	height: 475px;
+	width: 210px;
+	margin-left: 10px;
+	overflow: hidden;
+}
+.vanclAd img{
+	display: block;
+	border-color: #c9c9c9;
+	border-style: solid solid none;
+	border-width: 1px 1px medium;
+	height: 237px;
+	width: 208px;
+	border-image: none;
+}
+.rslides ul{
+	height: 475px;
+	width: 710px;
+	overflow: hidden;
+}
+.rslides  li{
+	height: 475px;
+	width: 710px;
+
+}
+.rslides li a{
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+.rslides a img{
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+.rslides_tabs{
+	width: 144px;
+	position: absolute;
+	top:430px;
+	right:319px;
+	bottom: 35px;
+	left:246px;
+	z-index: 10;
+}
+.rslides_tabs li{
+	width: 10px;
+	height: 10px;
+	margin-right: 8px;
+	list-style: none;
+	border-radius: 10px;
+	display: inline;
+	background: #1e1e1e;
+	cursor: pointer;
+	float: left;
+	overflow: hidden;
+}
+
+.blank20{
+	display: block;
+	height: 20px;
+	width: 100%;
+	clear: both;
+	font-size: 0;
+
+}
+.blank25{
+	display: block;
+	height: 25px;
+	width: 100%;
+	clear: both;
+	font-size: 1px;
+	overflow: hidden;
+
+}
+.blank0{
+	clear: both;
+	overflow: hidden;
+	width: 100%;
+}
+.hotshop{
+	height: auto;
+}
+.shopTitle{
+	height: auto;
+}
+.shopTitle h2{
+	font-weight: bold;
+	color: #595757;
+	font-family: "Microsoft Yahei";
+	font-size: 17px;
+	line-height: 40px;
+	padding-left: 35px;
+}
+.newlists2015{
+	height: auto;
+	width: 100%;
+}
+.newlists2015 ul{
+	margin:0 0 10px;
+	overflow: hidden;
+	width: 100%;
+}
+.newlists2015  li{
+	display: inline-block;
+	height: 232px;
+	margin:  0 4px 0 0 ;
+	width: 232px;
+}
+.newlists2015  li a{
+	border: 0 none;
+}
+.newlists2015  li img {
+	width: auto;
+	height: auto;
+	border:0 none;
+}
+.proAreabox{
+	width: 100%;
+	height: auto;
+}
+.vanclFootBox{
+	height: auto;
+	width: 100%;
+	margin:0 auto;
+	overflow: hidden;
+}
+.vanclFoot{
+	margin:0 auto;
+	max-width: 1200px;
+	min-width: 980px;
+	height: 160px;
+	border: 1px solid #e0e0e1;
+	padding-top: 20px;
+}
+.vanclFoot ul li{
+	padding-left:70px;
+	width: 127px;
+	border-right: 1px solid #e0e0e1;
+	color: #3e3a39;
+	float: left;
+	font-family: "Microsoft YaHei";
+	height: 138px;
+	list-style: none; 
+}
+.vanclFoot ul li h2{
+	font-size: 13px;
+	margin-bottom: 15px;
+}
+.vanclFoot ul li p{
+	line-height: 20px;
+}
+.vanclFoot ul li a{
+	color: #333;
+}
+.vanclFoot ul li a:hover{
+	color: #a10000;
+}
+.footIcon{
+	max-width: 1200px;
+	min-width: 980px;
+	height: 52px;
+	margin:15px auto;
+}
+.footIcon ul li{
+	list-style: none;
+	float: left;
+	height: 52px;
+	width: 25%;
+}
+.footIcon ul li a{
+	display: block;
+	width: 100%;
+	height: 30px;
+	margin-top: 11px;
+}
+.returnProduct{
+	background: url(../img/vanclsprite.png) no-repeat;
+	background-position: 88px -127px;
+
+}
+.freeShip{
+	background: url(../img/vanclsprite.png) no-repeat;
+	background-position: 70px -167px;
+}
+.cashOn{
+	background: url(../img/vanclsprite.png) no-repeat;
+	background-position: 74px -209px;
+}
+
+.cusService{
+	background: url(../img/vanclsprite.png) no-repeat;
+	background-position: 71px -251px;
+}
+.footBottom{
+	border-top:1px solid #3e3a39;
+	height: 33px;
+	width: 100%;
+}
+.footBottomTab{
+	height: 33px;
+	margin:0 auto;
+	max-width: 1200px;
+	min-width: 980px;
+}
+.footBottomTab p{
+	color: #3e3a39;
+	line-height: 33px;
+	text-align: center;
+	font-family: "Microsoft YaHei";
+}
+.subFooter{
+	margin: 0 auto 25px;
+	text-align: center;
+	width: 980px;
+}
+.subFooter span {
+	margin:0 10px;
+}
+.subFooter a {
+	margin:0 10px;
+}
+.redLogo{
+	display: inline-block;
+	height: 42px;
+	width: 113px;
+	background: url(../img/spritesbgtop.png) no-repeat;
+	background-position: 0 -581px;
+}
+.costumeOrg{
+	display: inline-block;
+	height: 45px;
+	width: 156px;
+	background: url(../img/spritesbgtop.png) no-repeat;
+	background-position: 0 -629px;
+}
+.wsjyBzzx{
+	display: inline-block;
+	height: 42px;
+	width: 96px;
+	background: url(../img/spritesbgtop.png) no-repeat;
+	background-position: 0 -675px;
+}
+.vanclMsg{
+	display: inline-block;
+	height: 42px;
+	width: 101px;
+	background: url(../img/spritesbgtop.png) no-repeat;
+	background-position: -97px -675px;
+}
+.vanclqingNian{
+	display: inline-block;
+	height: 42px;
+	width: 43px;
+	background: url(../img/spritesbgtop.png) no-repeat;
+	background-position: -202px -675px;
+}
+.ccav{
+	display: inline-block;
+	width: 120px;
+	height: 39px;
+}

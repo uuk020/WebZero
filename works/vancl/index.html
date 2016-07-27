@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>凡客VANCL，互联网快时尚品牌，服装，鞋，配饰，箱包，化妆品，网上购物，货到付款，30天无条件退换货</title>
+	<link type="image/x-icon" href="http://i.vanclimg.com/common/favicon/favicon.ico" rel="shortcut icon">
+	<meta content="VANCL,Are you ok?" name="keywords">
+	<link rel="stylesheet" type="text/css" href="css/master.css">
+	<script  type="text/javascript"src="jQ/jquery.js"></script>
+	<script type="text/javascript" src="jQ/jQ1.2.js"></script>
+</head>
+<body>
+	<!--导航条-->
+	<div class="vanclhead">
+		<div class="headerTopAreaBox">
+			<div class="headerTop">
+				<div  class="headerTopLeft">
+					<div class="loginArea">
+						您好,<span>欢迎光临凡客诚品！ </span>
+						<span>
+							<a href="#">登录</a> | 
+							<a href="#">注册</a>
+						</span>
+					</div>
+					<div class="recommendArea">
+						<a href="#">我的订单</a>
+						<a href="#">收藏本站</a>
+						<a href="#" style=" display: inline-block; color: #b81c22; padding: 3px 8px 3px 0px; line-height: 26px;">双十二退换货说明</a>
+					</div>
+				</div>
+				<div class="headerTopRight">
+					<div id="myVancl" class="active">
+						<a href="#" class="mapDropTitle">我的凡客</a>
+						<div class="mapDropListBox">
+							<ul class="mapDropList">
+								<li>
+									<a href="#">我的订单</a>
+								</li>
+								<li>
+									<a href="#">我的收藏</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div id="vanclhelp" class="active">
+						<a href="#" class="mapDropTitle">帮助中心</a>
+						<div class="mapDropListBox">
+							<ul class="mapDropList">
+								<li>
+									<a href="#">购物指南</a>
+								</li>
+								<li>
+									<a href="#">配送方式</a>
+								</li>
+								<li>
+									<a href="#">支付方式</a>
+								</li>
+								<li>
+									<a href="#">售后服务</a>
+								</li>
+								<li>
+									<a href="#">投诉建议</a>
+								</li>
+								<li>
+									<a href="#">在线客服</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div  id="vanclCustomer" class="active" >
+						<a href="#"class="mapDropTitle">网站公告</a>
+						<div class="mapDropListBox">
+							<ul class="mapDropList">
+								<li>
+									<a href="#">网站公告</a>
+								</li>
+								<li>
+									<a href="#">重要提示</a>
+								</li>
+								<li>
+									<a href="#">支付通告</a>
+								</li>
+								<li>
+									<a href="#">会员公告</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="vanclPhone">
+						<a href="#" >手机凡客</a>
+					</div>
+					<div class="vanclPhone">
+						<a href="#" style="background:url(img/customer2.png) no-repeat right top;width:53px;">在线客服</a>
+					</div>
+					<div class="payattention">
+						<a href="#" class="vweixinbox">
+							<span class="vweixin"></span>
+							<b class="vweixinTip"></b>
+						</a>
+						<a href="#" class="vweibo"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="background: #b81b22; text-align: center; overflow: hidden; height:54px">
+			<a href="#" class="sdimg">
+				<img src="img/tl1225-400.jpg">
+			</a>
+		</div>
+		<div class="vanclLogoSearch">
+			<div class="vanclLogo">
+				<h1>
+					<a href="#"></a>
+				</h1>
+			</div>
+			<div class="vanclSearch">
+				<div class="searchTab">
+					<div class="search">
+						<input type="text"defaultkey="" value="搜“针织衫”，体验与众不同" name="k" autocomplete="off" class="ac_input" />
+						<input  type="button" class="btn" />
+					</div>
+					<div class="shopbtn">
+						<a href="#">购物车(0)</a>
+					</div>
+				</div>
+				<div class="btnword">
+					<p>
+						热门搜索：
+						<a href="#" >衬衫</a>
+						<a href="#">羽绒服</a>
+						<a href="#">针织衫</a>
+						<a href="#">羊毛外套</a>
+						<a href="#">休闲裤</a>
+						<a href="#">牛仔裤</a>
+
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="vanclnav">
+			<div class="allProduct ">
+				<span class="subnavCon">全部商品分类</span>
+			</div>
+			<div id="v_Category">
+				<div class="vanclNavList">
+					<ul class="ulfr">
+						<li class="item itempic">
+							<a href="#">Nautilus</a>
+						</li>
+						<li class="item itempic">
+							<a href="#">羽绒服</a>
+						</li>
+						<li class="item itempic">
+							<a href="#">衬衫</a>
+						</li>
+						<li class="item itempic">
+							<a href="#">外套</a>
+						</li>
+						<li class="item itempic">
+							<a href="#">针织衫</a>
+						</li>
+						<li class="item itempic">
+							<a href="#">休闲裤</a>
+						</li>
+						<li class="item itempic">
+							<a href="#">牛仔</a>
+						</li>
+						<li>
+							<a href="#">反季断码</a>
+						</li>
+					</ul>
+				</div>
+				<div class="vanclSubNavList disnone" id="V_SubCategory">
+					<div class="vanclSubNav i_item_pic disnone">
+						<div class="i_pic_content  ">
+							<div class="picB">
+								<a href="#">
+									<img src="img/subnav/a1.jpg">
+								</a>
+							</div>
+							<div class="contentB">
+								<h3>
+									<a href="#">MA-1</a>
+								</h3>
+								<p></p>
+								<span>￥399起</span>
+							</div>
+						</div>
+						<div class="i_pic_line"></div>
+						<div class="i_pic_content">
+							<div class="picB">
+								<a href="#">
+									<img src="img/subnav/a2.jpg" >
+								</a>
+							</div>
+							<div class="contentB">
+								<h3>
+									<a href="#">羊绒衫</a>
+								</h3>
+								<p> 100%蒙古羊绒配合经典版型和配色，轻松应对降温</p>
+								<span>￥499起</span>
+							</div>
+						</div>
+					</div>
+					<div class="vanclSubNav i_item_pic disnone ">
+						<div class="i_pic_content ">
+							<div class="picB">
+								<a href="#">
+									<img src="img/subnav/a3.jpg">
+								</a>
+							</div>
+							<div class="contentB">
+								<h3>
+									<a href="#">男款</a>
+								</h3>
+								<p>超轻羽绒服 鹅绒造 更保暖 无异味</p>
+								<span>￥399</span>
+							</div>
+						</div>
+						<div class="i_pic_line"></div>
+						<div class="i_pic_content">
+							<div class="picB">
+								<a href="#">
+									<img src="img/subnav/a4.jpg" >
+								</a>
+							</div>
+							<div class="contentB">
+								<h3>
+									<a href="#">女款</a>
+								</h3>
+								<p>超轻羽绒服 鹅绒造 更保暖 无异味</p>
+								<span>￥399</span>
+							</div>
+						</div>
+					</div>
+					<div class="vanclSubNav i_item_pic disnone">
+						<div class="i_pic_content">
+							<div class="picB">
+								<a href="#">
+									<img src="img/subnav/a5.jpg">
+								</a>
+							</div>
+							<div class="contentB">
+								<h3>
+									<a href="#">免烫衬衫</a>
+								</h3>
+								<p> 使用成衣免烫技术 多次水洗依然平整如新</p>
+								<span>￥199</span>
+							</div>
+						</div>
+						<div class="i_pic_line"></div>
+						<div class="i_pic_content">
+							<div class="picB">
+								<a href="#">
+									<img src="img/subnav/a6.jpg" >
+								</a>
+							</div>
+							<div class="contentB">
+								<h3>
+									<a href="#">休闲衬衫</a>
+								</h3>
+								<p> 牛津纺 法兰绒 牛仔布</p>
+								<span>￥129起</span>
+							</div>
+						</div>
+					</div>
+					<div class="vanclSubNav i_item_pic disnone">
+						<div class="i_pic_content">
+							<div class="picB">
+								<a href="#">
+									<img src="img/subnav/a7.jpg">
+								</a>
+							</div>
+							<div class="contentB">
+								<h3>
+									<a href="#">羊毛大衣 双排扣</a>
+								</h3>
+								<p> 双排扣海军大衣粗呢面料 打造出厚实又松软的面料质感</p>
+								<span>￥999</span>
+							</div>
+						</div>
+						<div class="i_pic_line"></div>
+						<div class="i_pic_content">
+							<div class="picB">
+								<a href="#">
+									<img src="img/subnav/a8.jpg" >
+								</a>
+							</div>
+							<div class="contentB">
+								<h3>
+									<a href="#">羊毛大衣 连帽绳扣</a>
+								</h3>
+								<p> 澳大利亚羊毛 细节处致敬经典</p>
+								<span>￥1299</span>
+							</div>
+						</div>
+					</div>
+					<div class="vanclSubNav i_item_pic disnone">
+						<div class="i_pic_content">
+							<div class="picB">
+								<a href="#">
+									<img src="img/subnav/a9.jpg">
+								</a>
+							</div>
+							<div class="contentB">
+								<h3>
+									<a href="#">山羊绒衫</a>
+								</h3>
+								<p>100%山羊绒 舒适保暖</p>
+								<span>￥499起</span>
+							</div>
+						</div>
+						<div class="i_pic_line"></div>
+						<div class="i_pic_content">
+							<div class="picB">
+								<a href="#">
+									<img src="img/subnav/a10.jpg" >
+								</a>
+							</div>
+							<div class="contentB">
+								<h3>
+									<a href="#">凡客羊毛衫</a>
+								</h3>
+								<p> 国际羊毛局认证，100%全新羊毛</p>
+								<span>￥249起</span>
+							</div>
+						</div>
+					</div>
+					<div class="vanclSubNav i_item_pic disnone">
+						<div class="i_pic_content">
+							<div class="picB">
+								<a href="#">
+									<img src="img/subnav/a11.jpg">
+								</a>
+							</div>
+							<div class="contentB">
+								<h3>
+									<a href="#">supima免烫休闲裤</a>
+								</h3>
+								<p> 适度宽松 舒适自然 穿着挺拔修长</p>
+								<span>￥299</span>
+							</div>
+						</div>
+						<div class="i_pic_line"></div>
+						<div class="i_pic_content">
+							<div class="picB">
+								<a href="#">
+									<img src="img/subnav/a12.jpg" >
+								</a>
+							</div>
+							<div class="contentB">
+								<h3>
+									<a href="#">弹力免烫休闲裤</a>
+								</h3>
+								<p>  外观挺括 手感柔软 具体卓越弹性和完美回弹力 穿着活动自如 轻松惬意</p>
+								<span>￥299</span>
+							</div>
+						</div>
+					</div>
+					<div class="vanclSubNav i_item_pic disnone">
+						<div class="i_pic_content">
+							<div class="picB">
+								<a href="#">
+									<img src="img/subnav/a13.jpg">
+								</a>
+							</div>
+							<div class="contentB">
+								<h3>
+									<a href="#">轻弹锥形窄脚牛仔裤</a>
+								</h3>
+								<p> 高耐磨，高舒适，易于穿搭</p>
+								<span>￥199</span>
+							</div>
+						</div>
+						<div class="i_pic_line"></div>
+						<div class="i_pic_content">
+							<div class="picB">
+								<a href="#">
+									<img src="img/subnav/a14.jpg" >
+								</a>
+							</div>
+							<div class="contentB">
+								<h3>
+									<a href="#">轻弹修身直筒牛仔裤</a>
+								</h3>
+								<p> 基布选自澳洲产棉花纺制，舒适，无紧绷、僵硬感</p>
+								<span>￥199</span>
+							</div>
+						</div>
+					</div>
+					<div ></div>
+
+				</div>	
+			</div>
+		</div>
+	</div>
+	<!--凡客内容-->
+	<div class="vanclContent">
+		<!--全部分类列表-->
+		<div class="wwwcategoryList">
+				<div class="categpost">
+					<dl>
+						<h3>
+							<a href="#">男装</a>
+						</h3>
+						<dt>
+							<a href="#">衬衫</a>
+						</dt>
+						<dd>
+							<a href="#"  style="color: #b81c22;">免烫</a>
+							<a href="#">法兰绒</a>
+							<a href="#">牛仔布</a>
+							<a href="#">牛津纺</a>
+						</dd>
+						<dt>
+							<a href="#">针织衫</a>
+						</dt>
+						<dd>
+							<a href="#"  style="color: #b81c22;">羊毛衫</a>
+							<a href="#">羊绒衫</a>
+							<a href="#">棉绒衫</a>
+						</dd>
+						<dt>
+							<a href="#">外套</a>
+						</dt>
+						<dd>
+							<a href="#"  style="color: #b81c22;">羽绒服</a>
+							<a href="#">冲锋衣</a>
+							<a href="#">羊毛外套</a>
+							<a href="#">卫衣</a>
+						</dd>
+						<dt>
+							<a href="#">裤装</a>
+						</dt>
+						<dd>
+							<a href="#"  style="color: #b81c22;">牛仔裤</a>
+							<a href="#">休闲裤</a>
+							<a href="#">针织裤</a>
+							<a href="#">运动裤</a>
+						</dd>
+					</dl>
+					<dl>
+						<h3><a href="#">女装</a></h3>
+						<dt>
+							<a href="#">上装</a>
+						</dt>
+						<dd>
+							<a href="#" style="color: #b81c22;">羽绒服</a>
+							<a href="#">针织衫</a>
+							<a href="#">卫衣</a>
+							<a href="#">羊毛大衣</a>
+						</dd>
+						<dt>
+							<a href="#">裤装</a>
+						</dt>
+						<dd>
+							<a href="#"  style="color: #b81c22;">牛仔裤</a>
+							<a href="#">运动裤</a>
+							<a href="#">打底裤</a>
+						</dd>
+					</dl>
+					<dl>
+						<h3>
+							<a href="#">鞋</a> /
+							<a href="#">家居</a> /
+							<a href="#">内衣</a> /
+							<a href="#">袜品</a>
+						</h3>
+						<dd>
+							<a href="#"  style="color: #b81c22;">鞋</a> 
+							<a href="#">家居</a> 
+							<a href="#">内衣</a> 
+							<a href="#">袜品</a>
+						</dd>
+					</dl>
+				</div>
+				
+			</div>
+			<!--轮播图-->
+			<div class="vanclFocusAd">
+				<div style="width:30%;height:17px;"></div>
+				<div class="vanclFocus ">
+					<ul class="rslides">
+						<li style="display: list-item; float: none; position: relative; opacity: 1; z-index: 2;transition: opacity 500ms ease-in-out 0s;;">
+							<a href="#">
+								<img src="img/lunbotu/sj1.jpg">
+							</a>	
+						</li>
+						<li  style="display: list-item; float: none; position: absolute; opacity: 0; z-index: 1;transition: opacity 500ms ease-in-out 0s;;" >
+							<a href="#">
+								<img src="img/lunbotu/sj2.jpg">
+							</a>	
+						</li>
+						<li  style="display: list-item; float: none; position: absolute; opacity: 0; z-index: 1;transition: opacity 500ms ease-in-out 0s;;">
+							<a href="#">
+								<img src="img/lunbotu/sj3.jpg">
+							</a>	
+						</li>
+						<li  style="display: list-item; float: none; position: absolute; opacity: 0; z-index: 1;transition: opacity 500ms ease-in-out 0s;;">
+							<a href="#">
+								<img src="img/lunbotu/sj4.jpg">
+							</a>	
+						</li>
+						<li  style="display: list-item; float: none; position: absolute; opacity: 0; z-index: 1;transition: opacity 500ms ease-in-out 0s;;">
+							<a href="#">
+								<img src="img/lunbotu/sj5.jpg">
+							</a>	
+						</li>
+						<li  style="display: list-item; float: none; position: absolute; opacity: 0; z-index: 1;transition: opacity 500ms ease-in-out 0s;;">
+							<a href="#">
+								<img src="img/lunbotu/sj6.jpg">
+							</a>	
+						</li>
+						<li  style="display: list-item; float: none; position: absolute; opacity: 0; z-index: 1;transition: opacity 500ms ease-in-out 0s;;">
+							<a href="#">
+								<img src="img/lunbotu/sj7.jpg">
+							</a>	
+						</li>
+						<li  style="display: list-item; float: none; position: absolute; opacity: 0; z-index: 1;transition: opacity 500ms ease-in-out 0s;;">
+							<a href="#">
+								<img src="img/lunbotu/sj8.jpg">
+							</a>	
+						</li>
+					</ul>
+					<ul class="rslides_tabs">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="vanclAd">
+					<a href="#">
+						<img src="img/lmsk3.jpg">
+					</a>
+					<a href="#">
+						<img src="img/tlmtxxk.jpg">
+					</a>
+				</div>
+			</div>
+			<span class="blank20"></span>
+			<!--当季推荐-->
+			<div class="hotshop">
+				<div class="shopTitle">
+					<h2>当季推荐</h2>
+				</div>
+				<div class="newlists2015">
+					<ul>
+						<li>
+							<a href="#">
+								<img src="img/hotshop/hotshop1.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/hotshop/hotshop2.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/hotshop/hotshop3.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/hotshop/hotshop4.jpg">
+							</a>
+						</li>
+						<li style="margin:0px">
+							<a href="#">
+								<img src="img/hotshop/hotshop5.jpg">
+							</a>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<a href="#">
+								<img src="img/hotshop/hotshop6.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/hotshop/hotshop7.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/hotshop/hotshop8.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/hotshop/hotshop9.jpg">
+							</a>
+						</li>
+						<li style="margin:0px">
+							<a href="#">
+								<img src="img/hotshop/hotshop10.jpg">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--衣服-->
+			<div class="blank0"></div>
+			<div class="proAreabox">
+				<div class="shopTitle">
+					<h2>上装</h2>
+				</div>
+				<div class="newlists2015">
+					<ul>
+						<li style="width: 474px; ">
+							<a href="#">
+								<img src="img/shangzhuang/sz1.jpg">
+							</a>
+						</li>
+						<li style="width: 474px; ">
+							<a href="#">
+								<img src="img/shangzhuang/sz2.jpg">
+							</a>
+						</li>
+						<li style="margin:0px;">
+							<a href="#">
+								<img src="img/shangzhuang/sz3.jpg">
+							</a>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<a href="#">
+								<img src="img/shangzhuang/sz4.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/shangzhuang/sz5.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/shangzhuang/sz6.jpg">
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/shangzhuang/sz7.jpg">
+							</a>
+						</li>
+						<li style="margin:0px;">
+							<a href="#">
+								<img src="img/shangzhuang/sz8.jpg">
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="hotshop">
+					<div class="shopTitle">
+						<h2>下装</h2>
+					</div>
+					<div class="newlists2015">
+					<ul>
+						<li style="width: 474px; ">
+							<a href="#">
+								<img src="img/xiazhuang/xz1.jpg">
+							</a>
+						</li>
+						<li style="width: 474px; ">
+							<a href="#">
+								<img src="img/xiazhuang/xz2.jpg">
+							</a>
+						</li>
+						<li style="margin:0px;">
+							<a href="#">
+								<img src="img/xiazhuang/xz3.jpg">
+							</a>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<a href="#">
+								<img src="img/xiazhuang/xz4.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/xiazhuang/xz5.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/xiazhuang/xz6.jpg">
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/xiazhuang/xz7.jpg">
+							</a>
+						</li>
+						<li style="margin:0px;">
+							<a href="#">
+								<img src="img/xiazhuang/xz8.jpg">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="hotshop">
+				<div class="shopTitle">
+					<h2>更多精品</h2>
+				</div>
+				<div class="newlists2015">
+					<ul>
+						<li>
+							<a href="#">
+								<img src="img/more/more1.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/more/more2.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/more/more3.jpg">
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/more/more4.jpg">
+							</a>
+						</li>
+						<li style="margin:0px;">
+							<a href="#">
+								<img src="img/more/more5.jpg">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="blank25"></div>
+	<div class="vanclFootBox">
+		<div class="vanclFoot">
+			<ul>
+				<li>
+					<h2>关于凡客</h2>
+					<p>
+						<a href="#">公司简介</a>
+					</p>
+					<p>
+						<a href="#">联系我们</a>
+					</p>
+					<p>
+						<a href="#">友情链接</a>
+					</p>
+				</li>
+				<li>
+					<h2>新手指南</h2>
+					<p>
+						<a href="#">账号注册</a>
+					</p>
+					<p>
+						<a href="#">购物指南</a>
+					</p>
+					<p>
+						<a href="#">网站地图</a>
+					</p>
+				</li>
+				<li>
+					<h2>配送范围及时间</h2>
+					<p>
+						<a href="#">国内配送</a>
+					</p>
+					<p>
+						<a href="#">订单拆分</a>
+					</p>
+				</li>
+				<li>
+					<h2>支付方式</h2>
+					<p>
+						<a href="#">货到付款</a>
+					</p>
+					<p>
+						<a href="#">在线支付</a>
+					</p>
+					<p>
+						<a href="#">礼品卡及账号余额</a>
+					</p>
+					<p>
+						<a href="#">其他支付方式</a>
+					</p>
+				</li>
+				<li>
+					<h2>售后服务</h2>
+					<p>
+						<a href="#">退换货政策</a>
+					</p>
+					<p>
+						<a href="#">退换货办理流程</a>
+					</p>
+					<p>
+						<a href="#">退货换网上办理</a>
+					</p>
+					<p>
+						<a href="#">退款说明</a>
+					</p>
+				</li>
+				<li style="border:none">
+					<h2>帮助中心</h2>
+					<p>
+						<a href="#">在线客服</a>
+					</p>
+					<p>
+						<a href="#">找回密码</a>
+					</p>
+					<p>
+						<a href="#">隐私声明</a>
+					</p>
+				</li>
+			</ul>
+		</div>
+		<div class="footIcon">
+			<ul>
+				<li><a href="#" class="returnProduct"></a></li>
+				<li><a href="#" class="freeShip"></a></li>
+				<li><a href="#" class="cashOn"></a></li>
+				<li><a href="#" class="cusService"></a></li>
+			</ul>
+		</div>
+		<div class="footBottom">
+			<div class="footBottomTab">
+				<p>Copyright 2007 - 2015 vancl.com All Rights Reserved 京ICP证100557号 京公网安备11011502002400号 出版物经营许可证新出发京批字第直110138号</p>
+			</div>
+		</div>
+		<span class="blank20"></span>
+		<div class="subFooter">
+			<a href="#" class="redLogo"></a>
+			<span class="costumeOrg"></span>
+			<a href="#" class="wsjyBzzx"></a>
+			<a href="#" class="vanclMsg"></a>
+			<a href="#" class="vanclqingNian"></a>
+			<a href="#" class="ccav">
+				<img src="img/kexin_brand_for_others.png" style="width: 120px;
+	height: 39px;">
+			</a>
+		</div>
+	</div>
+</body>
+</html>
