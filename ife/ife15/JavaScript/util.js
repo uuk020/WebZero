@@ -92,3 +92,15 @@ function getObjectLength(obj) {
 	}
 	return num;
 }
+// 判断是否为邮箱地址
+function isEmail(emailStr) {
+  // your implement
+  var emailReg = /^([A-Za-z0-9_-])+@([A-Za-z0-9])+\.([A-Za-z0-9])+$/;
+  return emailReg.test(emailStr);
+}
+// 判断是否为手机号
+function isMobilePhone(phone) {
+    // your implement
+  var phoneReg = /^1\d{10}$/;
+  return phoneReg.test(phone);
+}
