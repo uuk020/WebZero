@@ -5,30 +5,58 @@
 	<title>DOM操作</title>
 </head>
 <body>
-	<div class="a1" id="a2">11</div>
+	<div class="a1 a56 a3" id="a2" style="position:absolute;left:1000px;top:2000px;">11</div>
 <script>
 
 // 为element增加一个样式名为newClassName的新样式
+var a2 = document.getElementById("a2");
+//检测是否有该类名
+function hasClassName(element, hClass){
+	return element.className.match(new RegExp("(\\s|^)" + hClass + "(\\s|$)"));
+}
+//hasClassName(a2,"a1");
 function addClass(element, newClassName) {
   // your implement
-  element.className += " " + newClassName;
+  if(hasClassName(element,newClassName)){
+  	console.log('已有此类名');
+  }else{
+  	element.className += " " + newClassName;
+  }
 }
-addClass(a2,'a3');
+addClass(a2,'a4');
 // 移除element中的样式oldClassName
 function removeClass(element, oldClassName) {
     // your implement
+  var classNames = element.className.split(/\s+/), // 获取类名集合剪切成数组
+  		pos, // 此变量是获取有类名的下标
+  		i,
+  		len;
+  for(i = 0,len = classNames.length;i < len;i++){ //循环元素类名
+  	if(classNames[i] == oldClassName){ //如果数组中的一个className等于oldClassName ,把该元素的下标赋值pos 结束循环
+  		pos = i; 
+  		break;
+  	}
+  }		
+  classNames.splice(pos, 1); //剪切已有元素的下标
+  element.className = classNames.join(" ");	//重新设置类名	 
 }
-
+//removeClass(a2,"a56");
 // 判断siblingNode和element是否为同一个父元素下的同一级的元素，返回bool值
 function isSiblingNode(element, siblingNode) {
     // your implement
+    return element.parentNode === siblingNode.parentNode; 
 }
 
 // 获取element相对于浏览器窗口的位置，返回一个对象{x, y}
 function getPosition(element) {
     // your implement
+    var obj = {};
+    obj.x = element.getBoundingClientRect().left + window.scrollX;
+    obj.y = element.getBoundingClientRect().top + window.scrollY;
+    return obj;
+    //当计算边界矩形时，会考虑视口区域（或其他可滚动元素）内的滚动操作，也就是说，当滚动位置发生了改变，top和left属性值就会随之立即发生变化（因此，它们的值是相对于视口的，而不是绝对的）。如果不希望属性值随视口变化，那么只要给top、left属性值加上当前的滚动位置（通过window.scrollX和window.scrollY），这样就可以获取与当前的滚动位置无关的常量值。
 }
-// your implement
+//getPosition(a2)
 </script>	
 </body>
 </html>
