@@ -6,6 +6,11 @@
 </head>
 <body>
 	<div class="a1 a56 a3" id="a2" style="position:absolute;left:1000px;top:2000px;">11</div>
+  <div id="adom">
+    <div class="classa">adom>class</div>
+  </div>
+  <a href="#">a标签</a>
+  <div >data</div>
 <script>
 
 // 为element增加一个样式名为newClassName的新样式
@@ -57,6 +62,84 @@ function getPosition(element) {
     //当计算边界矩形时，会考虑视口区域（或其他可滚动元素）内的滚动操作，也就是说，当滚动位置发生了改变，top和left属性值就会随之立即发生变化（因此，它们的值是相对于视口的，而不是绝对的）。如果不希望属性值随视口变化，那么只要给top、left属性值加上当前的滚动位置（通过window.scrollX和window.scrollY），这样就可以获取与当前的滚动位置无关的常量值。
 }
 //getPosition(a2)
+// 实现一个简单的Query
+function querySelector(selector, root){
+  var elements = [],
+      allChildren = null;
+  root = root || document;
+  switch (selector.charAt(0)) {
+        case "#": //id选择器
+          elements.push(root.getElementById(selector.substring(1)));
+          break;
+        case ".": //类选择器
+          if (root.getElementsByClassName) {
+            elements.push(root.getElementsByClassName(selector.substring(1)));
+          }else{ //兼容低版本浏览器
+            var reg = new RegExp("\\b" + selector.substring(1) + "\\b"),
+                i,
+                len;
+            allChildren = root.getElementsByTagName("*");
+            for(i = 0, len = allChildren.length; i < len; i++){
+              if(reg.test(allChildren[i].className)){
+                elements.push(allChildren[i]);
+              }   
+            }  
+          }
+          break;  
+        case "[":
+          if(selector.indexOf("=") === -1) {
+            allChildren = root.getElementsByTagName("*");
+            for(var i = 0, len = allChildren.length; i<len; i++){
+              if(allChildren[i].getAttribute(selector.slice(1, -1)) !== null){
+                elements.push(allChildren[i]);
+              }else{
+                var index = selector.indexOf("=");
+                allChildren = root.getElementsByTagName("*");
+                for(var i = 0, len = allChildren.length; i<len; i++){
+                  if(allChildren[i].getAttribute(1, index) === selector.slice(index + 1, -1)){
+                    element.push(allChildren[i]);
+                  }
+                }
+              }
+            }
+          } 
+          break;
+        default:
+          // 标签选择器
+          elements = root.getElementsByTagName(selector);
+          break;
+      }    
+  return elements;    
+}
+function $(selector) {
+  if(selector == document){
+    return document;
+  }
+  selector = selector.trim();
+  if(selector.indexOf(" ") !== -1){
+    var selectorArr = selector.split(/\s+/);
+    return querySelector(selectorArr[1], querySelector(selectorArr[0])[0])[0];
+  }else{
+    return querySelector(selector,document)[0];
+  }
+}
+
+// 可以通过id获取DOM对象，通过#标示，例如
+$("#adom"); // 返回id为adom的DOM对象
+
+// 可以通过tagName获取DOM对象，例如
+$("a"); // 返回第一个<a>对象
+
+// 可以通过样式名称获取DOM对象，例如
+$(".classa"); // 返回第一个样式定义包含classa的对象
+
+// 可以通过attribute匹配获取DOM对象，例如
+$("[data-log]"); // 返回第一个包含属性data-log的对象
+
+$("[data-time=2015]"); // 返回第一个包含属性data-time且值为2015的对象
+
+// 可以通过简单的组合提高查询便利性，例如
+console.log($("#adom .classa")); // 返回id为adom的DOM所包含的所有子节点中，第一个样式定义包含classa的对象
 </script>	
 </body>
 </html>
