@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Event</title>
+</head>
+<body>
+	<script>
+	// 给一个element绑定一个针对event事件的响应，响应函数为listener
+	/**
+ 	 * 事件添加函数
+   * @param {object}   element  需要绑定事件的对象
+   * @param {string}   event    事件类型
+   * @param {function} listener 事件触发执行的函数
+   */
+	function addEvent(element, event, listener) {
+    // your implement
+    if (element.addEventListener) {
+    	element.addEventListener(event, listener);
+    } else if(element.attachEvent) {
+    	element.attachEvent("on" + event, listener); //低版本IE浏览器
+    }else{
+    	element["on" + event] = listener;
+    }
+	}
+
+	// 例如：
+	function clicklistener(event) {
+    ...
+	}
+	addEvent($("#doma"), "click", a);
+	/**
+ 	 * 事件添加函数
+   * @param {object}   element  需要移除事件的对象
+   * @param {string}   event    事件类型
+   * @param {function} listener 事件被移除的函数
+   */
+	// 移除element对象对于event事件发生时执行listener的响应
+
+	function removeEvent(element, event, listener) {
+    // your implement
+    if (element.removeEventListenr) {
+    	element.removeEventListenr(event, listener);
+    }else if (element.detachEvent) {
+    	element.detachEvent("on" + event, listener);
+    } else {
+    	element["on" + event] = null;
+    }
+	}
+	</script>	
+</body>
+</html>
