@@ -47,6 +47,51 @@
     	element["on" + event] = null;
     }
 	}
+	// 实现对click事件的绑定
+function addClickEvent(element, listener) {
+    // your implement
+  addEvent(element,"click",listener);  
+}
+
+// 实现对于按Enter键时的事件绑定
+function addEnterEvent(element, listener) {
+    // your implement
+   addEvent(element,"keydown",function(e){
+   	var event = e || window.event;
+   	if(event.keyCode === 13){
+   		listener();
+   	}
+   }); 
+}
+	/**
+	 *结合DOM.html运用	
+	 *addEvent(element, event, listener) -> $.on(element, event, listener);
+	 *removeEvent(element, event, listener) -> $.un(element, event, listener);
+	 *addClickEvent(element, listener) -> $.click(element, listener);
+	 *addEnterEvent(element, listener) -> $.enter(element, listener);
+	 */
+	 $.on = function(element, event, listener){
+	 	var el = element,
+	 	    tp = event,
+	 	    le = listener;
+	 	return addEvent(el, tp, le); 
+	 }
+	 $.un = function(element, event, listener){
+	 	var el = element,
+	 	    tp = event,
+	 	    le = listener;
+	 	return removeEvent(el, tp, le);     
+	 }
+	 $.click = function(element, listener){
+	 	var el = element,
+	 	    le = listener;
+	 	return addClickEvent(el, le);    
+	 }
+	 $.enter = function(element, listener){
+	 	var el = element,
+	 	    le = listener;
+	 	return addEnterEvent(el, le);    
+	 }
 	</script>	
 </body>
 </html>
