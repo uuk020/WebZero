@@ -199,4 +199,40 @@ function addEnterEvent(element, listener) {
       }   
     });
   }
+  //BOM
+  // 判断是否为IE浏览器，返回-1或者版本号
+    function isIE() {
+      // your implement
+      var browerAgent = navigator.userAgent,
+            ieAgent  = browerAgent.match(/(MSIE\s|trident.*rv:)([\w.])+/);
+      if (ieAgent) {
+            return ieAgent[1];  
+      } else {
+            return -1;
+      }
+    }
+    isIE();
+    // 设置cookie
+    function setCookie (cookieName, cookieValue, expiredays) {
+        // your implement
+      var endDate = new Date();
+      endDate.setDate(endDate.getDate() + expiredays);
+        document.cookie = cookieName + "=" + cookieValue + ";expires=" + endDate;
+    }
+    setCookie("baidu", "www.baidu.com",2);
+    // 获取cookie值
+    function getCookie (cookieName) {
+        // your implement
+        var cookieData = document.cookie.split(";"),
+             i,
+             len;
+        for (i = 0, len = cookieData.length; i < len; i++) {
+            var cookieArray = cookieData[i].split("=");
+            if (cookieArray[0] == cookieName) {
+                return cookieArray[1];
+            }    
+        }
+        return "";         
+    }
+
  
