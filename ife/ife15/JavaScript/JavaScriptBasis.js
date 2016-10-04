@@ -6,7 +6,13 @@ function isArray(arr) {
 // 判断fn是否为一个函数，返回一个bool值
 function isFunction(fn) {
   // your implement
-  return typeof(fn) === 'function'?true:false;
+  var flag;
+  if (typeof(fn) === 'function') {
+      flag = true;
+  } else {
+      flag = false;
+  }
+  return flag;
 }
 // 使用递归来实现一个深度克隆，可以复制一个目标对象，返回一个完整拷贝
 // 被复制的对象类型会被限制为数字、字符串、布尔、日期、数组、Object对象。不会包含函数、正则对象等
@@ -104,3 +110,4 @@ function isMobilePhone(phone) {
   var phoneReg = /^1\d{10}$/;
   return phoneReg.test(phone);
 }
+

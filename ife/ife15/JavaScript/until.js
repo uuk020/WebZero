@@ -18,17 +18,17 @@ function removeClass(element, oldClassName) {
       len;
   for(i = 0,len = classNames.length;i < len;i++){ //循环元素类名
     if(classNames[i] == oldClassName){ //如果数组中的一个className等于oldClassName ,把该元素的下标赋值pos 结束循环
-      pos = i; 
+      pos = i;
       break;
     }
-  }   
+  }
   classNames.splice(pos, 1); //剪切已有元素的下标
-  element.className = classNames.join(" "); //重新设置类名   
+  element.className = classNames.join(" "); //重新设置类名
 }
 // 判断siblingNode和element是否为同一个父元素下的同一级的元素，返回bool值
 function isSiblingNode(element, siblingNode) {
     // your implement
-    return element.parentNode === siblingNode.parentNode; 
+    return element.parentNode === siblingNode.parentNode;
 }
 
 // 获取element相对于浏览器窗口的位置，返回一个对象{x, y}
@@ -60,10 +60,10 @@ function querySelector(selector, root){
             for(i = 0, len = allChildren.length; i < len; i++){
               if(reg.test(allChildren[i].className)){
                 elements.push(allChildren[i]);
-              }   
-            }  
+              }
+            }
           }
-          break;  
+          break;
         case "[":
           if(selector.indexOf("=") === -1) {
             allChildren = root.getElementsByTagName("*");
@@ -80,14 +80,14 @@ function querySelector(selector, root){
                 }
               }
             }
-          } 
+          }
           break;
         default:
           // 标签选择器
           elements = root.getElementsByTagName(selector);
           break;
-      }    
-  return elements;    
+      }
+  return elements;
 }
 function $(selector) {
   if(selector == document){
@@ -120,10 +120,6 @@ function $(selector) {
   }
 
   // 例如：
-  function clicklistener(event) {
-    ...
-  }
-  addEvent($("#doma"), "click", a);
   /**
    * 事件添加函数
    * @param {object}   element  需要移除事件的对象
@@ -145,7 +141,7 @@ function $(selector) {
   // 实现对click事件的绑定
 function addClickEvent(element, listener) {
     // your implement
-  addEvent(element,"click",listener);  
+  addEvent(element,"click",listener);
 }
 
 // 实现对于按Enter键时的事件绑定
@@ -156,37 +152,29 @@ function addEnterEvent(element, listener) {
     if(event.keyCode === 13){
       listener();
     }
-   }); 
+   });
 }
   /**
-   *结合DOM.html运用  
+   *结合DOM.html运用
    *addEvent(element, event, listener) -> $.on(element, event, listener);
    *removeEvent(element, event, listener) -> $.un(element, event, listener);
    *addClickEvent(element, listener) -> $.click(element, listener);
    *addEnterEvent(element, listener) -> $.enter(element, listener);
    */
+
    $.on = function(element, event, listener) {
-    var el = element,
-        tp = event,
-        le = listener;
-    return addEvent(el, tp, le); 
-   }
+       return addEvent(element, event, listener);
+   };
+
    $.un = function(element, event, listener) {
-    var el = element,
-        tp = event,
-        le = listener;
-    return removeEvent(el, tp, le);     
-   }
+    return removeEvent(element, event, listener);
+   };
    $.click = function(element, listener) {
-    var el = element,
-        le = listener;
-    return addClickEvent(el, le);    
-   }
+    return addClickEvent(element, listener);
+   };
    $.enter = function(element, listener) {
-    var el = element,
-        le = listener;
-    return addEnterEvent(el, le);    
-   }
+    return addEnterEvent(element, listener);
+   };
    $.delegate = delegateEvent;
   // 先简单一些
   function delegateEvent(element, tag, eventName, listener) {
@@ -196,7 +184,7 @@ function addEnterEvent(element, listener) {
           target = oEvent.target || oEvent.srcElement;
       if(target.nodeName.toLowercase() === tag){
         listener.call(target, oEvent);
-      }   
+      }
     });
   }
   //BOM
@@ -206,7 +194,7 @@ function addEnterEvent(element, listener) {
       var browerAgent = navigator.userAgent,
             ieAgent  = browerAgent.match(/(MSIE\s|trident.*rv:)([\w.])+/);
       if (ieAgent) {
-            return ieAgent[1];  
+            return ieAgent[1];
       } else {
             return -1;
       }
@@ -230,9 +218,8 @@ function addEnterEvent(element, listener) {
             var cookieArray = cookieData[i].split("=");
             if (cookieArray[0] == cookieName) {
                 return cookieArray[1];
-            }    
+            }
         }
-        return "";         
+        return "";
     }
 
- 
