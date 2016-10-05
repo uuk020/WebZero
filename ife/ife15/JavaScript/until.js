@@ -222,5 +222,79 @@ function addEnterEvent(element, listener) {
         }
         return "";
     }
-    var a = 123;
+    /*
+    * 简单封装一个get请求的Ajax函数
+    * 请求成功后的执行函数
+    * 请求失败后的函数(可选)
+    * */
+    function ajaxGet (url, fnSuccess, fnFailed) {
+        //创建Ajax对象
+        var oAjax = null;
+        //判断有没有XMLHttpRequest对象,兼容IE6
+        if (window.XMLHttpRequest) {
+            oAjax = new XMLHttpRequest();
+        } else {
+            oAjax = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        //连接服务器
+        oAjax.open("GET",url,true);
+        //发送请求
+        oAjax.send();
+        oAjax.onreadystatechange = function () {
+            if (oAjax.readyState === 4) {
+                if(oAjax.status === 200) {
+                    fnSuccess(oAjax.responseText);
+                } else {
+                    if (fnFailed) {
+                        fnFailed();
+                    }
+                }
+            }
+        };
+    }
+    //封装一个Ajax方法
+    function ajax(url, options) {
+        // your implement
+        var oAjax = null;
+        if (window.XMLHttpRequest) {
+            oAjax = new XMLHttpRequest();
+        } else {
+            oAjax = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        var param = "";//请求参数
+        var data = options.data ? options.date : -1; //如果data,则缓存data
+        if (Object.prototype.toString.call(data).slice(8,-1).toLowerCase() === 'object') {
+            for (var key in date) {
+                if (data.hasOwnProperty(key)) {
+                    param += key + "=" + data[key] +"&";
+                }
+            }
+            param.replace(/&$/,"");
+        } else {
+            param = "timestamp=" + new Date().getTime();
+        }
+        var type = options.type ? options.type.toUpperCase() : "GET";
+        if (type === "GET") {
+            oAjax.open("GET", url + "?" + param, true);
+            oAjax.send();
+        } else {
+            oAjax.open("POST", url + "?" + param, true);
+            oAjax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            oAjax.send();
+        }
+        oAjax.onreadystatechange = function () {
+            if (oAjax.readyState === 4) {
+                if (oAjax.status === 200) {
+                    options.onsuccess(oAjax.responseText,oAjax);
+                } else {
+                    if (options.onfail) {
+                        options.onfail(oAjax);
+                    }
+                }
+            }
+        };
+        return oAjax;
+    }
+
+
 
