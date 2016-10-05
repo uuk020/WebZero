@@ -263,6 +263,7 @@ function addEnterEvent(element, listener) {
         }
         var param = "";//请求参数
         var data = options.data ? options.date : -1; //如果data,则缓存data
+        //判断数据是否是对象
         if (Object.prototype.toString.call(data).slice(8,-1).toLowerCase() === 'object') {
             for (var key in date) {
                 if (data.hasOwnProperty(key)) {
@@ -273,12 +274,14 @@ function addEnterEvent(element, listener) {
         } else {
             param = "timestamp=" + new Date().getTime();
         }
+        //判断是不是"POST"，如果没填则默认为"GET"
         var type = options.type ? options.type.toUpperCase() : "GET";
         if (type === "GET") {
             oAjax.open("GET", url + "?" + param, true);
             oAjax.send();
         } else {
             oAjax.open("POST", url + "?" + param, true);
+            //使用post请求数据必须添加在open()与send()直接添加头信息。
             oAjax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             oAjax.send();
         }
