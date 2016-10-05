@@ -222,4 +222,5 @@ function addEnterEvent(element, listener) {
         }
         return "";
     }
+    var a = 123;
 
