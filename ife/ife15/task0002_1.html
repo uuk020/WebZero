@@ -3,12 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>处理兴趣列表</title>
+    <style type="text/css">
+        #warn {
+            color: red;
+            background-color: #aaaaaa;
+            display: none;
+            width: 368px;
+            padding: 5px;
+        }
+        #btn {
+            display: block;
+            margin-top: 30px;
+        }
+        label {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <h2>处理兴趣列表</h2>
     <p>允许“换行、空格（全角/半角）、逗号（全角/半角）、顿号、分号”进行分割</p>
-    <textarea name="user_input" id="user_input" cols="30" rows="10"></textarea>
-    <button id="btn">处理并输出</button>
+    <textarea name="user_input" id="user_input" cols="45" rows="20"></textarea>
+    <br>
+    <p id="warn">警告：输入的爱好数量不能超过10个或什么都不输入</p>
+    <button id="btn" >处理并输出</button>
     <form id="user_output"></form>
     <script src="JavaScript/until.js"></script>
     <script src="JavaScript/task0002_1.js"></script>
