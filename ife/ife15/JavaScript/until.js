@@ -199,7 +199,6 @@ function querySelector(selector, root){
         default:
           // 标签选择器
           elements = root.getElementsByTagName(selector);
-          break;
       }
   return elements;
 }
@@ -207,7 +206,7 @@ function $(selector) {
   if(selector == document){
     return document;
   }
-  selector = selector.trim();
+  selector = trim(selector);
   if(selector.indexOf(" ") !== -1){
     var selectorArr = selector.split(/\s+/);
     return querySelector(selectorArr[1], querySelector(selectorArr[0])[0])[0];
