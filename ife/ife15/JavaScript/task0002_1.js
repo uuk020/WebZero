@@ -11,7 +11,7 @@
             i = 0,
             warn = $("#warn");
         if (unValue == "") {
-            warn.innerHTML = "提醒：请输入一个兴趣爱好";
+            warn.innerHTML = "提醒：至少输入一个兴趣爱好";
         } else if (len > 10) {
             warn.innerHTML = "警告：输入爱好不能超过十个";
         } else {
