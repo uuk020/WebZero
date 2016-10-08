@@ -8,11 +8,14 @@
         var value = userInput.value.split(/\n|\,|\，|\、|\s+|\u3000|\;/),
             unValue = uniqArray(value),
             len =  unValue.length,
-            i = 0;
-        if (len > 10 || unValue == "" ) {
-            $("p").style.display = "block";
+            i = 0,
+            warn = $("#warn");
+        if (unValue == "") {
+            warn.innerHTML = "提醒：请输入一个兴趣爱好";
+        } else if (len > 10) {
+            warn.innerHTML = "警告：输入爱好不能超过十个";
         } else {
-            $("p").style.display = "none";
+            warn.innerHTML = "";
             userOutput.innerHTML = "";
             for (; i < len; i++) {
                 var trimValue = trim(unValue[i]);

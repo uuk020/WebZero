@@ -1,0 +1,37 @@
+/*task0002_1*/
+body {
+    background-color: #e2e2e2;
+    font-family: 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+}
+.hobby-list {
+    width: 980px;
+    margin: 0 auto;
+}
+#user_input {
+    width: 980px;
+    height: 200px;
+}
+.action {
+    position: relative;
+}
+#warn {
+    color: red;
+    padding: 5px;
+    position: absolute;
+    top: -48px;
+}
+#btn {
+    display: block;
+    margin-top: 30px;
+    width: 100px;
+    height: 28px;
+    background-color: #fff;
+    border-radius: 6px;
+    color: #666;
+    padding: 6px 24px;
+    border: none;
+    outline: none;
+}
+label {
+    display: block;
+}
