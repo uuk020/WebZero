@@ -20,7 +20,7 @@
             for (; i < len; i++) {
                 var trimValue = trim(unValue[i]);
                 if (trimValue !== "") {
-                    userOutput.innerHTML += "<label>" + "<input type='checkbox'>"+ trimValue +"</label>";
+                    userOutput.innerHTML += "爱好"+ (i + 1) +":<label>" + "<input type='checkbox'>"+ trimValue +"</label>";
                 }
             }
         }
