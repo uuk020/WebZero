@@ -1,4 +1,4 @@
-/*task0002_1*/
+/*task0002_1 css*/
 body {
     background-color: #e2e2e2;
     font-family: 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
@@ -35,4 +35,35 @@ body {
 }
 label {
     display: block;
+}
+/*task0002_2 css*/
+.count-down {
+    width: 980px;
+    margin: 0 auto;
+}
+.time-input {
+    width: 980px;
+    box-sizing: border-box;
+    padding: 5px;
+    font-size: 16px;
+    outline: none;
+}
+.time-btn {
+    display: block;
+    margin-top: 10px;
+    width: 100px;
+    height: 28px;
+    background-color: #fff;
+    border-radius: 6px;
+    color: #666;
+    padding: 6px 24px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.show-time {
+    font-size: 18px;
+    color: #000;
+    display: inline-block;
+    margin-top: 10px;
 }

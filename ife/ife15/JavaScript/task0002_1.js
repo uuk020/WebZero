@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 2016/10/7.
+ * Created by Wythe on 2016/10/7.
  */
 (function handle() {
     var userInput = $("#user_input");
