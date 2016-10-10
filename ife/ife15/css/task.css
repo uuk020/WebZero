@@ -67,3 +67,62 @@ label {
     display: inline-block;
     margin-top: 10px;
 }
+/*task0002_3 css*/
+*{
+    margin: 0;
+    padding: 0;
+}
+.slide-img {
+    width: 980px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.slide-img .container {
+    width: 600px;
+    height: 375px;
+    overflow: hidden;
+    position: relative;
+}
+.slide-img .slide {
+    list-style-type: none;
+    width: 4200px;
+    height: 375px;
+    position: absolute;
+}
+.slide li {
+    float: left;
+}
+.slide a {
+    display: inline-block;
+    width: 600px;
+    height: 375px;
+}
+.slide img {
+    display: inline-block;
+    width: 600px;
+    height: 375px;
+}
+.chooce {
+    margin-top: 10px;
+    height: 28px;
+}
+.chooce button{
+    display: inline-block;
+    width: 100px;
+    height: 28px;
+    background-color: #fff;
+    border-radius: 6px;
+    color: #666;
+    padding: 6px 24px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.chooce input {
+    border-radius: 6px;
+    border: 0px;
+    height: 28px;
+    outline: none;
+    padding-left: 10px;
+    width: 90px;
+}
