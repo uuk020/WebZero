@@ -124,20 +124,12 @@ function addClass(element, newClassName) {
     element.className += " " + newClassName;
   }
 }
+// 移除element中的样式oldClassName
 function removeClass(element, oldClassName) {
-  // your implement
-  var classNames = element.className.split(/\s+/), // 获取类名集合剪切成数组
-      pos, // 此变量是获取有类名的下标
-      i,
-      len;
-  for(i = 0,len = classNames.length;i < len;i++){ //循环元素类名
-    if(classNames[i] == oldClassName){ //如果数组中的一个className等于oldClassName ,把该元素的下标赋值pos 结束循环
-      pos = i;
-      break;
+    if (hasClassName(element, oldClassName)) {
+        var reg = new RegExp('(\\s|^)' + oldClassName + '(\\s|$)');
+        element.className = element.className.replace(reg, '');
     }
-  }
-  classNames.splice(pos, 1); //剪切已有元素的下标
-  element.className = classNames.join(" "); //重新设置类名
 }
 // 判断siblingNode和element是否为同一个父元素下的同一级的元素，返回bool值
 function isSiblingNode(element, siblingNode) {
@@ -288,18 +280,20 @@ function addEnterEvent(element, listener) {
    $.enter = function(element, listener) {
     return addEnterEvent($(element), listener);
    };
-   $.delegate = delegateEvent;
+   $.delegate = function(selector, tag, eventName, listener) {
+    return delegateEvent($(selector), tag, eventName, listener);
+};
   // 先简单一些
-  function delegateEvent(element, tag, eventName, listener) {
+    function delegateEvent(element, tag, eventName, listener) {
     // your implement
-    return addEvent($(element), eventName, function(ev) {
-      var oEvent = ev || window.event,
-          target = oEvent.target || oEvent.srcElement;
-      if(target.nodeName.toLowercase() === tag){
-        listener.call(target, oEvent);
-      }
+        return addEvent(element, eventName, function(ev) {
+            var oEvent = ev || event; // 兼容处理
+            var target = oEvent.target || oEvent.srcElement; // 兼容处理
+            if (target.tagName.toLocaleLowerCase() === tag) {
+                listener.call(target, oEvent); // 使用call方法修改执行函数中的this指向，现在this指向触发了事件的HTML节点（可直接使用this.innerHTML返回该节点内容）
+            }
     });
-  }
+}
   //BOM
   // 判断是否为IE浏览器，返回-1或者版本号
     function isIE() {

@@ -83,6 +83,29 @@ label {
     overflow: hidden;
     position: relative;
 }
+.slide-img .slide-nav {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 2%;
+    list-style-type: none;
+}
+.slide-nav li {
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    margin-left: 5px;
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    text-indent: -999px;
+}
+.slide-nav li.active {
+    background-color: #4abce6;
+}
 .slide-img .slide {
     list-style-type: none;
     width: 4200px;
