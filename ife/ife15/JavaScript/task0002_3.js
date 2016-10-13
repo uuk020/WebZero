@@ -21,7 +21,7 @@ function slideShow () {
     createNav.getElementsByTagName("li")[0].className = "active";//默认第一个li为active
 
     play = setInterval(sildeAnimate,time);
-    
+
     clickCircle();
     //点击圆点切换图片
     function clickCircle() {
@@ -45,7 +45,7 @@ function slideShow () {
         outValue = 'true';
         $(".out").value = 'true';
     });
-
+    $.click(".loop");
     /*
      *  循环轮播，循环时触发（正向与反向循环）
      */

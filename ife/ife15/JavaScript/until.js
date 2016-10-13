@@ -155,9 +155,11 @@ function querySelector(selector, root){
         case "#": //id选择器
           elements.push(root.getElementById(selector.substring(1)));
           break;
+
         case ".": //类选择器
           if (root.getElementsByClassName) {
-            elements.push(root.getElementsByClassName(selector.substring(1)));
+            //elements.push(root.getElementsByClassName(selector.substring(1)));
+              elements = root.getElementsByClassName(selector.substring(1));
           }else{ //兼容低版本浏览器
             var reg = new RegExp("\\b" + selector.substring(1) + "\\b"),
                 i,
@@ -170,6 +172,7 @@ function querySelector(selector, root){
             }
           }
           break;
+
         case "[":
           if(selector.indexOf("=") === -1) {
             allChildren = root.getElementsByTagName("*");
@@ -405,6 +408,41 @@ function addEnterEvent(element, listener) {
         };
         return oAjax;
     }
-
-
-
+//获取样式
+function getStyle(element, attr) {
+    //IE写法
+    if (element.currentStyle) {
+        return element.currentStyle[attr];
+        //标准
+    } else {
+        return getComputedStyle(element, null)[attr];
+    }
+}
+/**
+ * 获取当前元素在同级元素的索引
+ * @param   {HTMLElement} element html节点
+ * @returns {number} 索引
+ */
+function getIndex(element) {
+    var aBrother = element.parentNode.children;
+    for (var i = 0, len = aBrother.length; i < len; i++) {
+        if (aBrother[i] === element) {
+            return i;
+        }
+    }
+}
+//动画滑动
+function moveMargin (element, iTarget) {
+    clearInterval(element.timer);
+    element.timer = setInterval(function () {
+        var iCurrent = 0;
+        iCurrent = parseInt(getStyle(element, "marginLeft"));
+        var iSpeed = (iTarget - iCurrent) / 10 ;
+        iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+        if (iCurrent === iTarget) {
+            clearTimeout(element.timer);
+        } else {
+            element.style.marginLeft = iCurrent + iSpeed + "px";
+        }
+    },30);
+}

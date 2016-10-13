@@ -111,6 +111,7 @@ label {
     width: 4200px;
     height: 375px;
     position: absolute;
+    margin-left: 10px;
 }
 .slide li {
     float: left;
