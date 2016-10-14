@@ -86,7 +86,7 @@ function slideShow () {
                 moveMargin(slide, iTargets);
             }
         } else {
-            //正向循环
+            //正向不循环
             if (inValue === 'true') {
                 if ((getIndex(lightLi) + 1) !== imgLength) {
                     iTargets = (-imgWidth * (getIndex(lightLi) + 1));
@@ -102,7 +102,7 @@ function slideShow () {
                 }
                 moveMargin(slide, iTargets);
             }
-            //反向循环;
+            //反向不循环
             if (outValue === 'true') {
                 if (getIndex(lightLi) !== 0) {
                     iTargets = -imgWidth * (getIndex(lightLi) - 1);
