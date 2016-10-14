@@ -111,7 +111,6 @@ label {
     width: 4200px;
     height: 375px;
     position: absolute;
-    margin-left: 10px;
 }
 .slide li {
     float: left;
@@ -141,12 +140,4 @@ label {
     border: none;
     outline: none;
     cursor: pointer;
-}
-.chooce input {
-    border-radius: 6px;
-    border: 0px;
-    height: 28px;
-    outline: none;
-    padding-left: 10px;
-    width: 90px;
 }
