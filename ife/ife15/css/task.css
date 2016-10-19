@@ -141,3 +141,31 @@ label {
     outline: none;
     cursor: pointer;
 }
+/*task0002_4 css*/
+#accordion {
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+#accordion p {
+    width: 20px;
+    height: 300px;
+    float: left;
+}
+#accordion p:nth-child(1) {
+    background:#9cf;
+    width:420px;
+}
+#accordion p:nth-child(2) {
+    background:#f9c;
+}
+#accordion p:nth-child(3) {
+    background:#c9f;
+}
+#accordion p:nth-child(4) {
+    background:#cf9;
+}
+#accordion p:nth-child(5) {
+    background:#9fc;
+}
