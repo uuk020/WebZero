@@ -169,3 +169,46 @@ label {
 #accordion p:nth-child(5) {
     background:#9fc;
 }
+/*task0002_5 css*/
+.input_center {
+    width: 980px;
+    margin: 0 auto;
+}
+.input_center h2 {
+    font-size: 18px;
+    margin: 20px 0;
+}
+.input_center input {
+    width: 980px;
+    padding: 7px;
+    font-size: 16px;
+    outline: none;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-top-color: #c0c0c0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.input_center .list {
+    width: 980px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top-color: #d9d9d9;
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+.input_center .list li {
+    line-height: 22px;
+    padding: 0 10px;
+    cursor: default;
+}
+.input_center .list li.active {
+    background-color: #eee;
+}
