@@ -212,3 +212,35 @@ label {
 .input_center .list li.active {
     background-color: #eee;
 }
+/*task0002_6 css*/
+.drag-container {
+    width: 980px;
+    margin: 0 auto;
+    height: 452px;
+    margin-top: 20px;
+}
+.drag-wrap {
+    width: 150px;
+    height: 450px;
+    list-style-type: none;
+    position: relative;
+    border: 1px solid #000;
+    float: left;
+    margin-right: 160px;
+}
+.drag-wrap .drag {
+    width: 150px;
+    height: 40px;
+    background: #08336d;
+    border: 1px solid #000;
+    margin: -1px;
+    color: #fff;
+    line-height: 40px;
+    text-align: center;
+    cursor: move;
+    position: absolute;
+    left: 0;
+}
+.dragging {
+    visibility: hidden;
+}
