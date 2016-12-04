@@ -70,5 +70,6 @@
             alert("请输入今天待办事项");
         }
     }
+    //我真的适合编程吗？
     startBtn.addEventListener("click",actionToma);
 })();
