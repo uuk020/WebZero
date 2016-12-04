@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简易番茄钟</title>
+    <link rel="stylesheet" href="css/task.css">
+</head>
+<body>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">添加一个今天待办事项</h4>
+        </div>
+        <div class="modal-body">
+            <div class="modal-clock">
+                <label for="click" class="control-label">花费番茄钟</label>
+                <div class="modal-option">
+                    <select name="click" class="form-control" tabindex="0" id="amount">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <span class="modal-tips">(tips:完成一个番茄钟为25分钟)</span>
+            </div>
+            <div class="modal-container">
+                <label for="title" class="control-label">待办事项</label>
+                <div class="modal-text">
+                    <input type="text" class="add-text" name="title" placeholder="输入今天待办事项" />
+                </div>
+                <span class="modal-tips">(tips:目前只能完成一个事件)</span>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="add-task" id="start">添加</button>
+            <p class="start-time">倒计时开始...</p>
+        </div>
+        <!-- 倒计时 -->
+        <div class="modal-time">
+            <div class="remain-time">25 : 00</div>
+            <div class="task-title">今日事今日毕</div>
+            <div class="task-icon">
+
+            </div>
+            <div class="author">by wythehuang</div>
+        </div>
+    </div>
+    <script src="JavaScript/task0002_7.js"></script>
+</body>
+</html>

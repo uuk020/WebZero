@@ -5,7 +5,7 @@ var startX,
     startY,
     startTop,
     startLeft,
-    wrap = document.getElementsByClassName('drag-wrap');;
+    wrap = document.getElementsByClassName('drag-wrap');
 // 获取下一个滑块
 function nextDrag (element) {
     var next = element.nextElementSibling;
