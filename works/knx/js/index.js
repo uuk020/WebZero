@@ -113,5 +113,5 @@
 	},function(){
 		directionNav.hide();
 	});
-	console.log('本人正在找Web前端开发工程师工作，薪水4k，有意者请发邮件给我，邮件地址：jie893609357@163.com');
+	console.log('本人正在找Web前端开发工程师工作，薪水4k，有意者请发邮件给我，邮件地址：jie893609357@gmail.com');
 })(jQuery);
