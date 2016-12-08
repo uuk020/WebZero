@@ -376,13 +376,15 @@ label {
     padding: 0 15px;
 }
 .task-icon {
-    padding: 0 15px;
+    padding: 0 17px;
     padding-top: 20px;
     margin-bottom: 40px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 21px;
 }
 .author {
     text-align: right;
-    font-size: 20px;
+    font-size: 19px;
     font-weight: bold;
     line-height: 1.5;
     color: #444444;;
