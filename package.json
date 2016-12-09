@@ -1,0 +1,22 @@
+{
+  "name": "zero",
+  "version": "1.0.0",
+  "description": "前端学习",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uuk020/WebZero.git"
+  },
+  "author": "wythe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uuk020/WebZero/issues"
+  },
+  "homepage": "https://github.com/uuk020/WebZero#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
