@@ -58,7 +58,32 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
+    function playSound(e) {
+        // 获取页面对应按钮 DIV 元素
+        const keyCode = document.querySelector('div[data-key="' + e.keyCode + '"]');
+        // 根据触发按键的键码，获取对应音频
+        const audio = document.querySelector('audio[data-key="' + e.keyCode + '"]');
+        // 处理无效的按键事件
+        if (!audio) return;
+        // 增加样式
+        keyCode.classList.add('playing');
+        // 每次播放之后都使音频播放进度归零
+        audio.currentTime = 0;
+        // 播放相应音效
+        audio.play();
+        console.log(keyCode);
+    }
 
+    // 页面按钮恢复原状
+    function removeTransition(event) {
+        if (event.propertyName !== 'transform') return;
+        event.target.classList.remove('playing');
+    }
+
+    // 获取页面所有按钮元素
+    const keys = Array.from(document.querySelectorAll('.key'));
+    keys.forEach(key => {key.addEventListener('transitionend', removeTransition);});
+    window.addEventListener('keydown', playSound);
 </script>
 
 
