@@ -73,13 +73,11 @@
         audio.play();
         console.log(keyCode);
     }
-
     // 页面按钮恢复原状
     function removeTransition(event) {
         if (event.propertyName !== 'transform') return;
         event.target.classList.remove('playing');
     }
-
     // 获取页面所有按钮元素
     const keys = Array.from(document.querySelectorAll('.key'));
     keys.forEach(key => {key.addEventListener('transitionend', removeTransition);});
