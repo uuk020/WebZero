@@ -24,6 +24,7 @@
     .panels {
       min-height:100vh;
       overflow: hidden;
+      display: flex;
     }
 
     .panel {
@@ -41,8 +42,11 @@
       font-size: 20px;
       background-size:cover;
       background-position:center;
+      flex: 1;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
     }
-
 
     .panel1 { background-image:url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500); }
     .panel2 { background-image:url(https://source.unsplash.com/1CD3fd8kHnE/1500x1500); }
@@ -53,7 +57,11 @@
     .panel > * {
       margin:0;
       width: 100%;
-      transition:transform 0.5s;
+      transition: transform 0.5s 0.7s;
+      display: flex;
+      flex: 1 0 auto;
+      justify-content: center;
+      align-items: center;
     }
 
     .panel p {
@@ -68,8 +76,24 @@
 
     .panel.open {
       font-size:40px;
+      flex: 5;
     }
 
+    .panel p:first-child {
+      transform: translateY(-100%);
+    }
+
+    .panel p:last-child {
+      transform: translateY(100%);
+    }
+
+    .panel.open p:first-child {
+      transform: translateY(0);
+    }
+
+    .panel.open p:last-child {
+      transform: translateY(0);
+    }
     .cta {
       color:white;
       text-decoration: none;
@@ -108,6 +132,14 @@
 
   <script>
 
+    const panels = document.querySelectorAll('.panel');
+
+    function toggleOpen() {
+      console.log(this.className);
+      this.classList.toggle('open');
+    }
+
+    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
   </script>
 
 
