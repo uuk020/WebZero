@@ -8,15 +8,61 @@
 <body>
 
   <form class="search-form">
-    <input type="text" class="search" placeholder="City or State">
+    <input type="text" class="search" placeholder="诗句 诗名 诗人">
     <ul class="suggestions">
-      <li>Filter for a city</li>
-      <li>or a state</li>
+      <li>输入词句，找一首诗</li>
+      <li>或者输入诗名</li>
+      <li>或者输入诗人</li>
     </ul>
   </form>
 <script>
-const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+const endpoint = 'https://gist.githubusercontent.com/soyaine/81399bb2b24ca1bb5313e1985533c640/raw/bdf7df2cbcf70706c4a5e51a7dfb8c933ed78878/TangPoetry.json';
 
+const verse = [];
+// 发送请求，并把数据填充到数组
+fetch(endpoint)
+    .then(blob => blob.json())
+    .then(data => verse.push(...data));
+console.log(verse);
+
+// 匹配输入的函数
+// 1:运用 filter() 过滤数组数据
+// 2：创建正则表达式，构造过滤条件
+function findMatches(wordToMatch, verse) {
+  return verse.filter(poet => {
+      const regex = new RegExp(wordToMatch, 'gi');
+      const author = poet.detail_author.join('');
+      return poet.detail_text.match(regex) || poet.title.match(regex) || author.match(regex);
+  });
+}
+// 展示匹配结果的函数
+// 1:获取匹配数据
+// 2:替换关键词放入高亮的标签
+// 3:构造 HTML 标签数据
+// 4:将匹配值的 HTML 标签放入 <ul> 中
+function displayMatches() {
+  const matchesArray = findMatches(this.value, verse);
+  const regex = new RegExp(this.value, 'gi');
+  const html = matchesArray.map(poet => {
+      // 替换高亮的标签
+      const text = poet.detail_text.replace(regex, `<span class="hl">${ this.value }</span>`);
+      const title = poet.title.replace(regex, `<span class="hl">${ this.value }</span>`);
+      // 构造 HTML 值
+      return `
+				<li>
+					<span class="poet">${ text }</span>
+					<span class="title">${ title } - ${ poet.detail_author[0] }</span>
+				</li>
+			`;
+  }).join('');
+  suggestions.innerHTML = html;
+}
+
+const search = document.querySelector('.search');
+const suggestions = document.querySelector('.suggestions');
+
+search.addEventListener('change', displayMatches);
+search.addEventListener('keyup', displayMatches);
 </script>
   </body>
 </html>
