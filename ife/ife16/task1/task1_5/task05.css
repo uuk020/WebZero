@@ -3,7 +3,7 @@
     padding: 0;
 }
 body {
-    font-family: 黑体, sans-serif;
+    font-family: 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
     background: rgb(204, 204, 204);
     overflow-x: hidden;
 }
