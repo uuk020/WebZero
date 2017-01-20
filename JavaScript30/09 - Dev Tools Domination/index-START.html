@@ -18,29 +18,62 @@
     }
 
     // Regular
+    console.log('Hello Chrome');
 
     // Interpolated
+    console.log('Hello %s","World');
+    console.log('1 + 1 = %d', 2);
+    console.log('%o', {name: "wythe"});
 
     // Styled
+    console.log("%c I am Wythe",'font-size: 18px; color:blue;');
 
     // warning!
+    console.warn('你的JS姿势水平不够');
 
     // Error :|
+    console.error('你的css学的有错阿');
 
     // Info
+    console.info('少年，上车不？');
 
     // Testing
+    const p = document.querySelector('p');
+    console.assert(p.classList.contains('ouch'), 'This is wrong');
 
     // clearing
+    //console.clear();
 
     // Viewing DOM Elements
+    console.log(p);
+    console.dir(p);
 
     // Grouping together
+    dogs.forEach(dog => {
+        console.group();
+        //  console.groupCollapsed();//收起列表
+        console.log(`This is ${dog.name}`);
+        console.log(`${dog.name} is ${dog.age} years old`);
+        console.groupEnd();
+    });
 
     // counting
+    console.count('蛤');
+    console.count('苟');
+    console.count('赛艇');
+    console.count('naive');
+    console.count('naive');
+    console.count('赛艇');
+    console.count('苟');
 
     // timing
-
+    console.time('fetch my data');
+    fetch("https://api.github.com/users/uuk020")
+        .then(data => data.json())
+        .then(data => {
+            console.timeEnd('fetch my data');
+            console.log(data);
+        });
   </script>
 </body>
 </html>
