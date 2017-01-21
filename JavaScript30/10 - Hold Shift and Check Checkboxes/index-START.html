@@ -104,6 +104,58 @@
   </div>
 
 <script>
+  const boxs = document.querySelectorAll('input[type="checkbox"]');
+  let lastChecked;
+  console.log(boxs);
+
+  // 方法一
+  function handleCheck(e) {
+      // 是否按下 Shift 键且同时选中了某个元素
+      let isCheck = false;
+      if (e.shiftKey && this.checked) {
+        //console.warn(this);
+        // 遍历input元素
+        boxs.forEach(box => {
+           if (box === this || box === lastChecked) {
+             console.warn(this, lastChecked);
+             isCheck = !isCheck;
+           }
+           if (isCheck) {
+             box.checked = true;
+           }
+        });
+
+      }
+      lastChecked = this;
+      //console.info(lastChecked);
+  }
+
+  // 方法2
+  // 转换 Nodelist 为数组
+  const boxArr = Array.from(boxs);
+  // isBetween是否选中，lastCheck第二选中的checkbox
+  let isBetween = false,
+      lastCheck;
+  function  handleCheck1(e) {
+    if(!lastCheck) lastCheck = this;
+    isBetween = lastCheck.checked ? true : false;
+    if (e.shiftKey) {
+      // 选择第一个选择的项目
+      let start = boxArr.indexOf(this);
+      // 选择第二个选择的项目
+      let end = boxArr.indexOf(lastCheck);
+      // 裁剪数组的范围
+      boxArr.slice(Math.min(start, end), Math.max(start, end) + 1)
+          .forEach(input => input.checked = isBetween);
+      console.log(start + ":" + end);
+    }
+    lastCheck = this;
+  }
+
+  boxs.forEach(box => box.addEventListener('click', handleCheck1));
+
+
+
 </script>
 </body>
 </html>
