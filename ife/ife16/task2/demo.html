@@ -17,7 +17,7 @@
   </ul>
 
   <ul id="resort">
-    <!-- 
+    <!--
     <li>第一名：北京空气质量：<b>90</b></li>
     <li>第二名：北京空气质量：<b>90</b></li>
     <li>第三名：北京空气质量：<b>90</b></li>
@@ -37,11 +37,11 @@ function getData() {
   /*
   coding here
   */
-    var oUl=document.getElementById("source")
-    var oLi=oUl.getElementsByTagName("li")
-    var data=[]
-    for(var i=0;i<oLi.length;i++){
-        data[data.length]=oLi[i].innerText.split("：");
+    var oUl = document.getElementById("source")
+    var oLi = oUl.getElementsByTagName("li")
+    var data = []
+    for (var i = 0; i < oLi.length; i++) {
+        data[data.length] = oLi[i].innerText.split("：");
     }
   /*
   data = [
@@ -59,7 +59,7 @@ function getData() {
  */
 function sortAqiData(data) {
     data.sort(function(n1,n2){
-        return n1[1]-n2[1];
+        return n1[1] - n2[1];
     })
     return data;
 }
@@ -69,12 +69,12 @@ function sortAqiData(data) {
  * 格式见ul中的注释的部分
  */
 function render(data) {
-    var oUl_sort=document.getElementById("resort")
-    var str="";
-    for (var i=0; i<data.length;i++){
-        var str=str+"<li>第"+(i+1)+"名："+data[i][0]+"："+"<b>"+data[i][1]+"</b></li>"
+    var oUl_sort = document.getElementById("resort")
+    var str = "";
+    for (var i = 0; i < data.length;i++) {
+        var str = str + "<li>第"+(i+1) + "名：" + data[i][0] + "：" + "<b>" + data[i][1] + "</b></li>"
     }
-    oUl_sort.innerHTML=str;
+    oUl_sort.innerHTML = str;
 }
 function btnHandle() {
   var aqiData = getData();
@@ -83,10 +83,10 @@ function btnHandle() {
 }
 function init() {
   // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
-    var oBtn=document.getElementById("sort-btn");
-    oBtn.addEventListener("click",function(){
+    var oBtn = document.getElementById("sort-btn");
+    oBtn.addEventListener("click",function() {
         btnHandle();
-    })
+    });
 }
 init();
 </script>
