@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单（一）单个表单项的检验</title>
+    <style>
+        label {
+            margin-right: 15px;
+            font-size: 15px;
+        }
+        input {
+            width: 200px;
+            height: 30px;
+            border-radius: 3px;
+            outline: none;
+            border: 1px solid #ccc;
+            padding-left: 15px;
+            font-size: 15px;
+        }
+        button {
+            box-sizing: border-box;
+            border: 2px solid #2E79BC;
+            background: #2E79BC;
+            padding: 7px;
+            border-radius: 3px;
+            color: #fff;
+            cursor: pointer;
+        }
+        p {
+            color: #a8a8a8;
+            padding-left: 50px;
+            margin: 0;
+            font-size: 13px;
+        }
+
+    </style>
+</head>
+<body>
+    <label for="checkValue">名称</label>
+    <input type="text" id="checkValue">
+    <button>验证</button>
+    <p id="tip">必填，长度为4~16个字符</p>
+    <script src="js/task29.js"></script>
+</body>
+</html>

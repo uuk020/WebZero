@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tag输入和兴趣爱好输入</title>
+    <style>
+        #tagContainer span {
+            display: inline-block;
+            font-size: 30px;
+            text-align: center;
+            padding: 0 15px;
+            margin: 2px 0;
+            margin-right: 10px;
+            height: 50px;
+            line-height: 50px;
+            background-color: #84C7FE;
+            color: #FFFFFF;
+        }
+
+        #hobbyContainer span {
+            display: inline-block;
+            font-size: 30px;
+            text-align: center;
+            padding: 0 15px;
+            margin: 2px 0;
+            margin-right: 10px;
+            height: 50px;
+            line-height: 50px;
+            background-color: #FFCE82;
+            color: #FFFFFF;
+        }
+
+    </style>
+</head>
+<body>
+    <label for="tagInput">Tag: </label>
+    <input type="text" placeholder="输入tag" id="tagInput">
+    <div id="tagContainer"></div>
+    <br>
+    <textarea id="hobbyInput" cols="30" rows="10" style="display: block"></textarea>
+    <br>
+    <button>确认兴趣爱好</button>
+    <div id="hobbyContainer"></div>
+    <script src="js/task21.js"></script>
+</body>
+</html>

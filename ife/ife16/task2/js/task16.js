@@ -7,11 +7,10 @@
  * };
  */
 var aqiData = {},
-		city = document.getElementById("aqi-city-input"),
-		num = document.getElementById("aqi-value-input"),
-		addBtn = document.getElementById("add-btn"),
-		delBtn = document.getElementById(""),
-		tabContent = document.getElementById("aqi-table");
+	city = document.getElementById("aqi-city-input"),
+	num = document.getElementById("aqi-value-input"),
+	addBtn = document.getElementById("add-btn"),
+	tabContent = document.getElementById("aqi-table");
 /**
  * 从用户输入中获取数据，向aqiData中增加一条数据
  * 然后渲染aqi-list列表，增加新增的数据
@@ -31,7 +30,7 @@ function addAqiData() {
 			alert("请输入整数");
 			return false;
 	}
-	aqiData[cityInput] = numInput; 		
+	aqiData[cityInput] = numInput;
 }
 
 /**
