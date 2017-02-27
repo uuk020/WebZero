@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>表单（二）多个表单项的动态校验</title>
+  <style>
+    .form-container {
+      width: 500px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+    .form-container p {
+      display: none;
+      position: relative;
+      top: -20px;
+      left: 100px;
+      color: #a8a8a8;
+      margin: 0;
+      font-size: 13px;
+    }
+    label {
+      display: block;
+      height: 42px;
+      width: 65px;
+      position: absolute;
+      left: 0;
+      font-size: 15px;
+      text-align: right;
+    }
+    input[type="text"], input[type="password"] {
+      display: block;
+      width: 200px;
+      height: 30px;
+      border-radius: 3px;
+      outline: none;
+      border: 1px solid #ccc;
+      padding-left: 15px;
+      font-size: 15px;
+      margin-bottom: 20px;
+      margin-left: 100px;
+    }
+    input[type="button"] {
+      box-sizing: border-box;
+      float: right;
+      margin-right: 182px;
+      border: 2px solid #2E79BC;
+      background: #2E79BC;
+      padding: 7px;
+      border-radius: 3px;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <form class="form-container">
+    <label for="checkName">名称:</label>
+    <input type="text" id="checkName">
+    <p>必填，长度为4-16个字符</p>  
+    <label for="checkPassword">密码:</label>
+    <input type="password" id="checkPassword">
+    <p>必填，长度为6-18个数字和字母</p> 
+    <label for="againPassword">密码确认:</label>
+    <input type="password" id="againPassword">
+    <p>重复输入密码</p>
+    <label for="checkemail">邮箱:</label>
+    <input type="text" id="checkemail">
+    <p>填写正确的邮箱格式</p>
+    <label for="checkPhone">手机:</label>
+    <input type="text" id="checkPhone">
+    <p>填写正确的手机号码</p>
+    <input type="button" value="提交">        
+  </form>
+  <script src="js/task30.js"></script>
+</body>
+</html>

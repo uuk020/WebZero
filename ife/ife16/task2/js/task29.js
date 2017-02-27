@@ -29,7 +29,7 @@ function check(value) {
     } else {
        tipText.innerHTML = '姓名不能为空';
        tipText.style.color = 'red';
-        inputContainer.style.border = "2px solid red";
+       inputContainer.style.border = "2px solid red";
     }
 }
 

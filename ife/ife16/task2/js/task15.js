@@ -21,12 +21,11 @@ function getData() {
     ……
   ]
   */
-    var data = [];
+    var data = [];      
     for(i = 0 ,len = li.length;i<len;i++){
         data.push(li[i].innerText.split("空气质量："));
     }
     return data;
-
 }
 /**
  * sortAqiData

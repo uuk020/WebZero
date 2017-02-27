@@ -14,8 +14,8 @@
       简单的办法
     */ 
     var btnEvent = document.getElementById("button"),
-         inputCon = document.getElementById("aqi-input"),
-         conDisplay = document.getElementById("aqi-display");
+        inputCon = document.getElementById("aqi-input"),
+        conDisplay = document.getElementById("aqi-display");
 
     function handler(){
         var conValue = parseInt(inputCon.value);
