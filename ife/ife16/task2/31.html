@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>表单联动</title>
+  <style>
+    * {
+			padding: 0;
+			margin: 0;
+			font-family: "Microsoft YaHei UI", sans-serif;
+		}
+    .form-container {
+      width: 700px;
+      margin: 0 auto;
+      padding: 100px;
+    }
+    .form-container fieldset {
+      border: none;
+      position: absolute;
+      text-align: center;
+      width: 50%;
+      height: 100px;
+      position: absolute;
+      left: 50%;
+      margin-left: -25%;
+    }
+    .form-container select {
+      width: 218px;
+      height: 40px;
+      padding: 5px;
+      border: 1px solid #CDCDCD;
+      border-radius: 5px;
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      transition: all 1s ease;
+    }
+    .form-container label {
+      margin-right: 80px;
+    }
+    .form-container #college, .form-container #company {
+      top: 160px; 
+    }
+    .form-container #company {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <form class="form-container">
+    <fieldset>
+      <label><input name="student" type="radio" checked />在校生 </label>
+      <label><input name="student" type="radio" />非在校生 </label>
+    </fieldset>
+    <fieldset id="college">
+      <label for="city">你的城市：
+        <select id="city" name="city">
+          <option selected="" value="北京" label="北京">北京</option>
+          <option value="上海" label="上海">上海</option>
+          <option value="广东" label="广东">广东</option>
+        </select>
+      </label>
+      <label for="school">你的学校：
+			<select id="school" name="school">
+        <option value="北京大学">北京大学</option>
+        <option value="清华大学">清华大学</option>
+        <option value="中国人民大学">中国人民大学</option>
+      </select>
+		  </label>
+    </fieldset>
+    <fieldset id="company">
+      <label for="corporation">你就职的公司：<input id="corporation" type="text" name="corporation" placeholder="请填写公司名称"></label>
+    </fieldset>
+  </form>
+  <script src="js/task31.js"></script>
+</body>
+</html>
